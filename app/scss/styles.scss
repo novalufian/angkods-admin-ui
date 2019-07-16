@@ -1,0 +1,30 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+@import "_navbar";
+@import "_card";
+
+
+*{
+    outline : 0;
+}
+
+body {
+    font-family: 'Questrial', sans-serif;
+    background : #f7f7f7;
+}
+
+.margin-tb-30x{
+    margin: 30px 0;
+}
+
+.row{
+    margin-bottom: 30px;
+}
+
+.body-container{
+    padding-top: 80px;
+}
+
+
