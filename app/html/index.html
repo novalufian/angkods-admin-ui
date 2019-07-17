@@ -20,10 +20,10 @@
             
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="text" /> 
-                    <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search...."/> 
+                    <!-- <button class="btn btn-primary my-2 my-sm-0" type="submit">
                         Search
-                    </button>
+                    </button> -->
                 </form>
                 
                 <p class="top-notif">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -56,75 +56,168 @@
         </nav>
         
         <div class="row">
-            <div class="col-md-8">
-                <div class="ct-chart"></div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Campign name
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 flex-row-reverse d-flex">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-secondary active">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Today
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option2" autocomplete="off"> week
+                            </label>
+                            <label class="btn btn-secondary">
+                                <input type="radio" name="options" id="option3" autocomplete="off"> month
+                            </label>
+                        </div> 
+                        
+                    </div>
+                </div>
+                
+                <canvas class="chart" id="myChart" width="400" height="175"></canvas>
+                
+                <!-- <p class="align-right"> total impression on july - campgin : sarden abc event rekormuri</p> -->
+                
+                <!-- <div class="col-md-12">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div> -->
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card">
                     <div class="card-header">
-                        <p>lorem ipsum</p>
+                        <p>Total Impression</p>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        
+                        <canvas id="my_doughnut" width="150" height="150"></canvas>
+                        
+                        300.000
                     </div>
                     <div class="card-footer">
-                        lorem
+                        <button class="btn btn-secondary col-md-12">
+                            read more
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2>
-                            Heading
-                        </h2>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                        </p>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2>
-                            Heading
-                        </h2>
-                        <p>
-                            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                        </p>
-                        <p>
-                            <a class="btn" href="#">View details »</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quisquam! Sit unde ipsa nulla soluta, sed accusantium architecto voluptas eum sequi vel asperiores rem tenetur atque quasi blanditiis est minus!
-                </div>
-            </div>
-            
-            
-        </div>
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>  
-    <script>
         
-    </script>
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="card">
+                    <div class="alert alert-success no-margin">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic distinctio vitae nulla dolor nobis ipsam consequuntur quibusdam tenetur totam atque, dolores repudiandae in sapiente, consequatur, necessitatibus animi odit omnis fugit!
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body row">
+                        <p class="col-md-12 text-primary">Current active campign</p>
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
+                                    </div>
+                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
+                                    <div class="col-md-4"></div>
+                                    <p class="col-md-8 card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                    <a href="">detail </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
+                                    </div>
+                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
+                                    </div>
+                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
+                                    <p class="col-md-8 card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
+                                    </div>
+                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p>
+                                    <p class="col-md-8 card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
+                                    </div>
+                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>  
+<script src="../js/main-chart.js"></script>
 </body>
 </html>

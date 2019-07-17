@@ -1,17 +1,40 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
 
-@import "_navbar";
-@import "_card";
+$blue:    #0a4a8f !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
 
+$theme-colors: (
+    "primary":    #0074e4,
+    "secondary":  #eaeaea,
+    "success":    #00bd56,
+    "info":       #93deff,
+    "warning":    #ffd933,
+    "danger":     #f30e5c,
+    "light":      $light,
+    "dark":       $dark
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 *{
     outline : 0;
+    color: #444444
 }
 
 body {
     font-family: 'Questrial', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
     background : #f7f7f7;
 }
 
@@ -23,8 +46,21 @@ body {
     margin-bottom: 30px;
 }
 
-.body-container{
-    padding-top: 80px;
+.no-margin{
+    margin: 0;
 }
+
+.body-container{
+    padding-top: 100px;
+}
+
+.chart{
+    padding-top: 50px;
+}
+
+@import "_navbar";
+@import "_card";
+@import "_dropdown";
+@import "_button";
 
 
