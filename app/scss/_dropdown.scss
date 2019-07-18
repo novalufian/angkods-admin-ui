@@ -1,4 +1,9 @@
 .dropdown{
+
+    &.navbar-top-menu{
+        padding: 0 0 0 10px;
+    }
+    
     .dropdown-toggle{
         border-radius: 100px;
         font-size: 13px;

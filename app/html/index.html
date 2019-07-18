@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
     
+    <link rel="stylesheet" href="../css/icofont.min.css">
+    
 </head>
 <body>
     <div class="container body-container">
@@ -26,11 +28,14 @@
                     </button> -->
                 </form>
                 
-                <p class="top-notif">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="top-notif "> <i class="icofont-mega-phone icofont-1x text-primary pulse"></i> you got special offer for next campign , <span class="text-primary">discount up to 50%</span> click <a href="">here</a> for more.</p>
                 
                 <ul class="navbar-nav ml-md-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <span class="badge badge-danger badge-notif">9+</span>
+                        <a class="nav-link notifcation-bell" href="#">
+                            <i class="icofont-notification icofont-2x text-secondary"></i>
+                        </a>
                     </li>
                     <li class="dropdown navbar-top-menu">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,52 +60,45 @@
             </div>
         </nav>
         
+        
+        
         <div class="row">
             <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Campign name
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="card flat">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Campign name
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8 flex-row-reverse d-flex">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Today
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> week
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="options" id="option3" autocomplete="off"> month
+                                    </label>
+                                </div> 
+                                
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-8 flex-row-reverse d-flex">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-secondary active">
-                                <input type="radio" name="options" id="option1" autocomplete="off" checked> Today
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option2" autocomplete="off"> week
-                            </label>
-                            <label class="btn btn-secondary">
-                                <input type="radio" name="options" id="option3" autocomplete="off"> month
-                            </label>
-                        </div> 
                         
+                        <canvas class="chart" id="myChart" width="400" height="175"></canvas>
                     </div>
                 </div>
                 
-                <canvas class="chart" id="myChart" width="400" height="175"></canvas>
-                
-                <!-- <p class="align-right"> total impression on july - campgin : sarden abc event rekormuri</p> -->
-                
-                <!-- <div class="col-md-12">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
-                </div> -->
             </div>
             <div class="col-md-3">
                 <div class="card">
@@ -114,7 +112,7 @@
                         300.000
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-secondary col-md-12">
+                        <button class="btn btn-secondary col-md-12 btn-sm">
                             read more
                         </button>
                     </div>
@@ -122,32 +120,104 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row mb-30">
+            <div class="col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body row">
+                        <div class="col-md-3">
+                            <h1 class="statistic-icon"><i class="icofont-steering"></i></h1>
+                        </div>
+                        <div class="col-md-9">
+                            <h3 class="statistic-title">1.000 KM</h3>
+                            <span class="statistic-desc" >your campaign goes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body row">
+                        <div class="col-md-3">
+                            <h1 class="statistic-icon"><i class="icofont-racing-flag-alt icofont-1x"></i></h1>
+                        </div>
+                        <div class="col-md-9">
+                            <h3 class="statistic-title">1.007</h3>
+                            <span class="statistic-desc" >Total campign</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body row">
+                        <div class="col-md-3">
+                            <h1 class="statistic-icon"><i class="icofont-chart-line-alt"></i></h1>
+                        </div>
+                        <div class="col-md-9">
+                            <h3 class="statistic-title">2.987 B </h3>
+                            <span class="statistic-desc" >Total impression</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="card card-statistic">
+                    <div class="card-body row">
+                        <div class="col-md-3">
+                            <h1 class="statistic-icon"><i class="icofont-fire-burn"></i></h1>
+                        </div>
+                        <div class="col-md-9">
+                            <h3 class="statistic-title">Rp. 1.987 B </h3>
+                            <span class="statistic-desc" >Money spend</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="row mb-30">
             <div class="col-md-12 ">
                 <div class="card">
-                    <div class="alert alert-success no-margin">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic distinctio vitae nulla dolor nobis ipsam consequuntur quibusdam tenetur totam atque, dolores repudiandae in sapiente, consequatur, necessitatibus animi odit omnis fugit!
+                    <div class="alert promo-section no-margin">
+                        <div class="card flat">
+                            <div class="card-body row ">
+                                <div class="col-md-4">
+                                    <h1 class="card-item-title font-800">Campign tracker</h1>
+                                </div>
+                                <div class="col-md-8">
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="row">
+        
+        <div class="row mb-30">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body row">
-                        <p class="col-md-12 text-primary">Current active campign</p>
+                        <p class="col-md-12 title-bold">Current active campign</p>
                         
                         <div class="col-md-4">
                             <div class="card card-item">
                                 <div class="card-body row no-margin">
                                     <div class="col-md-4">
-                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
+                                        <img src="https://ui-ex.com/images/sushi-vector-6.png" class="card-item-img">
                                     </div>
-                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
-                                    <div class="col-md-4"></div>
-                                    <p class="col-md-8 card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                    <a href="">detail </a>
+                                    <div class="col-md-8">
+                                        <p class="card-item-title">Campign name</p>
+                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="">click for detail </a>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -156,68 +226,131 @@
                             <div class="card card-item">
                                 <div class="card-body row no-margin">
                                     <div class="col-md-4">
-                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
+                                        <img src="https://sushinsake.nl/media/catalog/category/Bento_box.png" class="card-item-img">
                                     </div>
-                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
+                                    <div class="col-md-8">
+                                        <p class="card-item-title">Campign name</p>
+                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="">click for detail </a>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://cdn.iconscout.com/icon/free/png-256/bento-box-food-plate-fastfood-symbol-emoj-30704.png" class="card-item-img">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p class="card-item-title">Campign name</p>
+                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="">click for detail </a>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrnWTuAeTzPhQ96HE8N41TOYLqIIJm29Gjq7OSn5SZVGNsaf-" class="card-item-img">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p class="card-item-title">Campign name</p>
+                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="">click for detail </a>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-4">
+                                        <img src="https://images.emojiterra.com/google/android-pie/512px/1f95d.png" class="card-item-img">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <p class="card-item-title">Campign name</p>
+                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="">click for detail </a>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card card-item disabled">
+                                <div class="card-body row no-margin">
+                                    <div class="col-md-12 d-flex flex-column justify-content-center">
+                                        <p class="card-item-title text-center">Create new campign</p>
+                                        <p class="card-item-desc no-ellipsis text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate commodi</p>
+                                        <button href="#" class="btn btn-danger btn-sm col-md-6 align-self-center" disabled>create now</button>
+                                    </div>
+                                    
                                     
                                 </div>
                             </div>
                         </div>
                         
-                        
-                        <div class="col-md-4">
-                            <div class="card card-item">
-                                <div class="card-body row no-margin">
-                                    <div class="col-md-4">
-                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
-                                    </div>
-                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
-                                    <p class="col-md-8 card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p> 
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-md-4">
-                            <div class="card card-item">
-                                <div class="card-body row no-margin">
-                                    <div class="col-md-4">
-                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
-                                    </div>
-                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p>
-                                    <p class="col-md-8 card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-md-4">
-                            <div class="card card-item">
-                                <div class="card-body row no-margin">
-                                    <div class="col-md-4">
-                                        <img src="https://via.placeholder.com/80/f54291/" class="card-item-img">
-                                    </div>
-                                    <p class="col-md-8">Lorem ipsum dolor sit amet</p> 
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                        
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <span class="btn footer-link align-self-start">21 more campign</span>
+                        <a href="" class="btn footer-link align-self-end">show all campign list <i class="icofont-long-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mb-30">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
         
         
-</div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>  
-<script src="../js/main-chart.js"></script>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>  
+    <script src="../js/main-chart.js"></script>
 </body>
 </html>

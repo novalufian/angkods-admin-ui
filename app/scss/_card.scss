@@ -1,8 +1,16 @@
 .card{
+    
     background: #ffffff;
     border: 1px solid rgba(126, 126, 126, 0.13);
     box-shadow: 2px 2px 10px 5px rgba(236, 236, 236, .4);
     margin : 10px 0;
+    
+    &.flat{
+        background:unset;
+        border: unset;
+        box-shadow: unset;
+        margin : 10px 0;
+    }
     
     .card-header{
         background: #fff;
@@ -17,46 +25,137 @@
     .card-footer{
         background: #F8F8F8;
         border-top: unset;
+        
+        .footer-link{
+            font-size: 13px;
+            font-weight: 300;
+            font-style: italic;
+            transition: all .5s ease-in-out;
+
+            &:hover{
+                font-weight: 500;
+                margin-right: 10px;
+                i{
+                    margin-left: 20px;
+                }
+            }
+
+            i{
+                transition: all .5s ease-in-out;
+                margin-left: 10px; 
+            }
+        }
     }
 }
 
 .card-item{
     cursor: pointer;
+    min-height: 122px;
+    overflow: hidden;
     
-    // &:hover{
-        //     box-shadow: 2px 2px 10px 5px rgba(236, 236, 236, 0);
-        //     animation: bounce .5s forwards;
-        // }
+    &.disabled{
+        box-shadow: none;
+        opacity: .8;
         
-        .card-body{
-            // padding: 10px;
-            
-            p{
-                font-size: 16px;
-                line-height: 16px;
-                padding: 0;
-            }
-            
-            img{
-                position: absolute;
-                top: -50px;
-                left: -5px;
-                border-radius: 100px
-            }
+        &:hover{
+            opacity: 1;
         }
     }
     
-    @keyframes bounce{
-        0%{
-            transform: scale(1);
-        }
+    &:hover{
+        border: 1px solid rgba(126, 126, 126, 0.05);
+        box-shadow: 2px 2px 10px 5px rgba(236, 236, 236, 0);
         
-        30%{
-            transform: scale(1.1)
-        }
-        
-        100%{
-            transform: scale(1);
-            border: 1px solid rgba(126, 126, 126, 0);
+        &::after{
+            left : 50%;
         }
     }
+    
+    &::after {
+        content: "";
+        width: 150px;
+        height: 250px;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.75) 50%, rgba(255,255,255,0) 100%); 
+        position: absolute;
+        opacity: 0.35;
+        transform: rotate(45deg);
+        top: -50%;
+        left: -120%;
+        transition: all .35s ease;
+        
+    }
+    
+    .card-body{
+        // padding: 10px;
+        .card-item-title{
+            font-weight: bold;
+            color: #4b4b4b;
+        }
+        
+        p{
+            font-size: 16px;
+            line-height: 18px;
+            margin-bottom: 5px;
+            padding: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            color: $secondary;
+            
+            
+            &.card-item-desc{
+                font-size: 13px;
+            }
+            
+            &.no-ellipsis{
+                text-overflow: unset;
+            }
+        }
+        
+        a{
+            text-decoration: none;
+            font-size: 13px;
+        }
+        
+        .card-item-img{
+            width: 80px;
+        }
+    }
+}
+
+.card-statistic{
+    .statistic-icon{
+        i{
+            background: red;
+            padding: 10px;
+            border-radius: 100px;
+        }
+        
+    }
+
+    .statistic-title{
+        font-weight: 400;
+    }
+
+    .statistic-desc{
+        font-size: 13px;
+        font-weight: 200;
+        color: $secondary;
+    }
+}
+
+@keyframes bounce{
+    0%{
+        transform: scale(1);
+    }
+    
+    30%{
+        transform: scale(1.1)
+    }
+    
+    100%{
+        transform: scale(1);
+        border: 1px solid rgba(126, 126, 126, 0);
+    }
+}
