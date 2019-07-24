@@ -18,7 +18,7 @@ $cyan:    #17a2b8 !default;
 
 $theme-colors: (
     "primary":    #0074e4,
-    "secondary":  #eaeaea,
+    "secondary":  #b0b0b0 ,
     "success":    #00bd56,
     "info":       #93deff,
     "warning":    #ffd933,
@@ -109,5 +109,6 @@ body {
 @import "_dropdown";
 @import "_button";
 @import "_badge";
+@import "_icon";
 
 

@@ -1,0 +1,13 @@
+.icofont{
+    @each $color, $value in $theme-colors {
+        &.text-#{$color} {
+            &.shadow{
+                margin: 20px 0;
+                background: rgba($value, .30);
+                box-shadow: 0 0 0 10px rgba($value, .10),
+                            0 0 15px 20px rgba($value, .10) !important;
+            }
+            
+        }
+    }
+}
