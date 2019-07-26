@@ -15,7 +15,6 @@
 <body>
     <div class="container body-container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            
             <a class="navbar-brand" href="#">
                 <img src="https://miro.medium.com/max/1200/1*gOtFeO2p_WSenEhVFyhMig.png" class="brand-icon" alt="">
             </a>
@@ -101,20 +100,19 @@
                 
             </div>
             <div class="col-md-3">
-                <div class="card">
+                <div class="card card-statistic">
                     <div class="card-header">
-                        <p>Total Impression</p>
+                        <p class="statistic-title title-primary" >Total impression</p>
                     </div>
-                    <div class="card-body">
-                        
-                        <canvas id="my_doughnut" width="150" height="150"></canvas>
-                        
-                        300.000
+                    <div class="card-body ">
+                        <canvas id="my_doughnut" class="margin-25" width="150" height="auto"></canvas>
+                        <h2 class="col-md-12 text-center">300 B</h2>
+                        <p class="text-secondary col-md-12 text-center">Total impresion you got from selected campign</p>
                     </div>
-                    <div class="card-footer">
-                        <button class="btn btn-secondary col-md-12 btn-sm">
-                            read more
-                        </button>
+                    <div class="card-footer d-flex justify-content-center">
+                        <a href="" class="btn footer-link align-self-end text-danger">show all campign list 
+                            <i class="icofont-long-arrow-right text-danger"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -220,7 +218,7 @@
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
                                         <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">click for detail </a>
+                                        <a href="">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -235,7 +233,7 @@
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
                                         <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">click for detail </a>
+                                        <a href="">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -250,7 +248,7 @@
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
                                         <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">click for detail </a>
+                                        <a href="">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -265,7 +263,7 @@
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
                                         <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">click for detail </a>
+                                        <a href="">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -280,7 +278,7 @@
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
                                         <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">click for detail </a>
+                                        <a href="">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -309,47 +307,18 @@
             </div>
         </div>
         
-        <div class="row">
+    </div>
+    
+    <footer>
+        <div class="row d-flex justify-content-center">
             <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                <p class="text-secondary text-center text-12">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cumque consequatur laboriosam porro repellendus <br>
+                    angkods &copy; 2019
+                </p>
             </div>
         </div>
-        
-        
-    </div>
+    </footer>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -10598,6 +10598,10 @@ body {
   margin-bottom: 30px;
 }
 
+.margin-25 {
+  margin: -25px 0 25px;
+}
+
 .no-margin {
   margin: 0;
 }
@@ -10605,6 +10609,10 @@ body {
 .body-container {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.text-12 {
+  font-size: 12px;
 }
 
 .chart {
@@ -10779,6 +10787,13 @@ body {
           box-shadow: 2px 2px 10px 5px rgba(236, 236, 236, 0);
 }
 
+.card-item:hover .card-item-img {
+  -webkit-transform: scale(3) rotate(30deg);
+          transform: scale(3) rotate(30deg);
+  margin-left: -55px;
+  opacity: .65;
+}
+
 .card-item:hover::after {
   left: 50%;
 }
@@ -10786,7 +10801,7 @@ body {
 .card-item::after {
   content: "";
   width: 150px;
-  height: 250px;
+  height: 350px;
   background: white;
   background: -webkit-gradient(linear, left top, right top, from(white), color-stop(50%, rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0) 100%);
@@ -10831,6 +10846,8 @@ body {
 
 .card-item .card-body .card-item-img {
   width: 80px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .card-statistic .statistic-icon i {
@@ -11734,61 +11751,130 @@ body {
   margin-left: 20px;
   padding: 2.5px;
   z-index: 99;
+  height: 20px;
+  width: 20px;
+  line-height: 15px;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.icofont.text-primary {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-primary.shadow {
+  text-shadow: 0 0 5px rgba(0, 116, 228, 0.3);
   margin: 20px 0;
   background: rgba(0, 116, 228, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(0, 116, 228, 0.1), 0 0 15px 20px rgba(0, 116, 228, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(0, 116, 228, 0.1), 0 0 15px 20px rgba(0, 116, 228, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.icofont.text-secondary {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-secondary.shadow {
+  text-shadow: 0 0 5px rgba(176, 176, 176, 0.3);
   margin: 20px 0;
   background: rgba(176, 176, 176, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(176, 176, 176, 0.1), 0 0 15px 20px rgba(176, 176, 176, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(176, 176, 176, 0.1), 0 0 15px 20px rgba(176, 176, 176, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.icofont.text-success {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-success.shadow {
+  text-shadow: 0 0 5px rgba(0, 189, 86, 0.3);
   margin: 20px 0;
   background: rgba(0, 189, 86, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(0, 189, 86, 0.1), 0 0 15px 20px rgba(0, 189, 86, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(0, 189, 86, 0.1), 0 0 15px 20px rgba(0, 189, 86, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.icofont.text-info {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-info.shadow {
+  text-shadow: 0 0 5px rgba(147, 222, 255, 0.3);
   margin: 20px 0;
   background: rgba(147, 222, 255, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(147, 222, 255, 0.1), 0 0 15px 20px rgba(147, 222, 255, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(147, 222, 255, 0.1), 0 0 15px 20px rgba(147, 222, 255, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.icofont.text-warning {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-warning.shadow {
+  text-shadow: 0 0 5px rgba(255, 217, 51, 0.3);
   margin: 20px 0;
   background: rgba(255, 217, 51, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(255, 217, 51, 0.1), 0 0 15px 20px rgba(255, 217, 51, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(255, 217, 51, 0.1), 0 0 15px 20px rgba(255, 217, 51, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.icofont.text-danger {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-danger.shadow {
+  text-shadow: 0 0 5px rgba(243, 14, 92, 0.3);
   margin: 20px 0;
   background: rgba(243, 14, 92, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(243, 14, 92, 0.1), 0 0 15px 20px rgba(243, 14, 92, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(243, 14, 92, 0.1), 0 0 15px 20px rgba(243, 14, 92, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.icofont.text-light {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-light.shadow {
+  text-shadow: 0 0 5px rgba(248, 249, 250, 0.3);
   margin: 20px 0;
   background: rgba(248, 249, 250, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(248, 249, 250, 0.1), 0 0 15px 20px rgba(248, 249, 250, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(248, 249, 250, 0.1), 0 0 15px 20px rgba(248, 249, 250, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.icofont.text-dark {
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
 .icofont.text-dark.shadow {
+  text-shadow: 0 0 5px rgba(52, 58, 64, 0.3);
   margin: 20px 0;
   background: rgba(52, 58, 64, 0.3);
   -webkit-box-shadow: 0 0 0 10px rgba(52, 58, 64, 0.1), 0 0 15px 20px rgba(52, 58, 64, 0.1) !important;
           box-shadow: 0 0 0 10px rgba(52, 58, 64, 0.1), 0 0 15px 20px rgba(52, 58, 64, 0.1) !important;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
 }
 /*# sourceMappingURL=styles.css.map */
