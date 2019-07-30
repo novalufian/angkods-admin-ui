@@ -12,22 +12,23 @@
     <link rel="stylesheet" href="../css/icofont.min.css">
     
 </head>
-<body>
-    <div class="container body-container">
+<body class="row">
+    <aside id="menu-bar" class="col-md-2">
+    </aside>
+    <div class=" body-container col-md-10">
+        
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="#">
                 <img src="https://miro.medium.com/max/1200/1*gOtFeO2p_WSenEhVFyhMig.png" class="brand-icon" alt="">
             </a>
             
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <form class="form-inline">
+                <div class="col-md-2"></div>
+                <!-- <form class="form-inline">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search...."/> 
-                    <!-- <button class="btn btn-primary my-2 my-sm-0" type="submit">
-                        Search
-                    </button> -->
-                </form>
+                </form> -->
                 
-                <p class="top-notif "> <i class="icofont-mega-phone icofont-1x text-primary pulse"></i> you got special offer for next campign , <span class="text-primary">discount up to 50%</span> click <a href="">here</a> for more.</p>
+                <p class="top-notif "> no-margin <i class="icofont-mega-phone icofont-1x text-primary pulse"></i> you got special offer for next campign , <span class="text-primary">discount up to 50%</span> click <a href="" class="text-primary">here</a> for more.</p>
                 
                 <ul class="navbar-nav ml-md-auto">
                     <li class="nav-item">
@@ -61,10 +62,11 @@
         
         
         
+        
         <div class="row">
             <div class="col-md-9">
                 <div class="card flat">
-                    <div class="card-body">
+                    <div class="card-header">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="dropdown">
@@ -93,8 +95,14 @@
                                 
                             </div>
                         </div>
+                    </div>
+                    <div class="card-body">
                         
-                        <canvas class="chart" id="myChart" width="400" height="175"></canvas>
+                        
+                        <canvas  id="myChart" width="400" height="153"></canvas>
+                    </div>
+                    <div class="card-footer">
+                        <p class="col-md-12 text-right text-12 text-secondary">total impression on july - campaign : <i class="text-primary">sarden abc event rekormuri</i></p>
                     </div>
                 </div>
                 
@@ -102,11 +110,11 @@
             <div class="col-md-3">
                 <div class="card card-statistic">
                     <div class="card-header">
-                        <p class="statistic-title title-primary" >Total impression</p>
+                        <p class="statistic-title title-primary" >Total distance</p>
                     </div>
                     <div class="card-body ">
                         <canvas id="my_doughnut" class="margin-25" width="150" height="auto"></canvas>
-                        <h2 class="col-md-12 text-center">300 B</h2>
+                        <h2 class="col-md-12 text-center">300k KM</h2>
                         <p class="text-secondary col-md-12 text-center">Total impresion you got from selected campign</p>
                     </div>
                     <div class="card-footer d-flex justify-content-center">
@@ -202,7 +210,6 @@
             </div>
         </div>
         
-        
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -217,8 +224,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
-                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">read detail </a>
+                                        <p class="card-item-desc no-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="" class="text-primary">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -232,8 +239,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
-                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">read detail </a>
+                                        <p class="card-item-desc no-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="" class="text-primary">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -247,8 +254,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
-                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">read detail </a>
+                                        <p class="card-item-desc no-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="" class="text-primary">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -262,8 +269,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
-                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">read detail </a>
+                                        <p class="card-item-desc no-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="" class="text-primary">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -277,8 +284,8 @@
                                     </div>
                                     <div class="col-md-8">
                                         <p class="card-item-title">Campign name</p>
-                                        <p class="card-item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
-                                        <a href="">read detail </a>
+                                        <p class="card-item-desc no-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos harum voluptatibus. </p>
+                                        <a href="" class="text-primary">read detail </a>
                                     </div> 
                                 </div>
                             </div>
@@ -307,10 +314,57 @@
             </div>
         </div>
         
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <p class="col-md-12 title-bold">Current active campign</p>
+                        <table class="table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </table>
+                    </div>
+                    
+                    <div class="card-footer d-flex justify-content-between">
+                        <span class="btn footer-link align-self-start">21 more campign</span>
+                        <a href="" class="btn footer-link align-self-end">show all campign list <i class="icofont-long-arrow-right"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
-    <footer>
-        <div class="row d-flex justify-content-center">
+    <footer class="col-md-12">
+        <div class="d-flex justify-content-center">
             <div class="col-md-12">
                 <p class="text-secondary text-center text-12">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cumque consequatur laboriosam porro repellendus <br>

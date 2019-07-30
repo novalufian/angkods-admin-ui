@@ -17,7 +17,8 @@ $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
 $theme-colors: (
-    "primary":    #0074e4,
+    // "primary":    #0074e4,
+    "primary":    #614ad3,
     "secondary":  #b0b0b0 ,
     "success":    #00bd56,
     "info":       #93deff,
@@ -26,6 +27,8 @@ $theme-colors: (
     "light":      $light,
     "dark":       $dark
 );
+
+$dark-color : #0F141A;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -39,6 +42,7 @@ body {
     // font-family: 'Open Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
     background : #f7f7f7;
+    // background: #0F141A;
 }
 
 .margin-tb-30x{
@@ -55,11 +59,11 @@ body {
 
 .no-margin{
     margin: 0;
-}
+} 
 
 .body-container{
     padding-top: 100px;
-    padding-bottom: 100px;
+    min-height: calc(100vh - 100px);
 }
 
 .text-12{
@@ -112,11 +116,21 @@ body {
     font-weight: 800;
 }
 
+.footer-main{
+    margin-top: 100px;
+}
+
 @import "_navbar";
 @import "_card";
 @import "_dropdown";
 @import "_button";
 @import "_badge";
 @import "_icon";
+
+@each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+        background:$value;
+    }
+}
 
 

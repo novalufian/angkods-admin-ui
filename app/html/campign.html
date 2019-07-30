@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+    
+    <link rel="stylesheet" href="../css/icofont.min.css">
+    
+</head>
+<body>
+    <div class="container body-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="https://miro.medium.com/max/1200/1*gOtFeO2p_WSenEhVFyhMig.png" class="brand-icon" alt="">
+            </a>
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search...."/> 
+                </form>
+                
+                <p class="top-notif "> <i class="icofont-mega-phone icofont-1x text-primary pulse"></i> you got special offer for next campaign , <span class="text-primary">discount up to 50%</span> click <a href="" class="text-primary">here</a> for more.</p>
+                
+                <ul class="navbar-nav ml-md-auto">
+                    <li class="nav-item">
+                        <span class="badge badge-danger badge-notif">9+</span>
+                        <a class="nav-link notifcation-bell" href="#">
+                            <i class="icofont-notification icofont-2x text-secondary"></i>
+                        </a>
+                    </li>
+                    <li class="dropdown navbar-top-menu">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Jessica Jhonas
+                            <img src="https://i.pravatar.cc/25" class="rounded" alt="Jessica Jhonas">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                            <button class="dropdown-item" type="button">Action</button>
+                            <button class="dropdown-item" type="button">Another action</button>
+                            <button class="dropdown-item" type="button">Something else here</button>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">En</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider">
+                            </div> <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="row">
+            <div class="card col-md-3 card flat">
+                <div class="card-body">
+                    <!-- <img src="https://image.flaticon.com/icons/svg/1998/1998087.svg" class="img-responsive"> -->
+                    <h3 class=" title-bold">Campaign <br> List</h3>
+                    <p class="text-primary text-12">PT. Berkarya untuk bangsa</p>
+                </div>
+                
+            </div>
+            
+            <div class="col-md-4 card flat"></div>
+            
+            <div class="col-md-3 card flat">
+                <div class="card-body">
+                    <p class="card-desc text-12 text-primary text-right no-margin">impression last 7 day</p>
+                    <canvas id="chart-progress-imp" height="100"></canvas>
+                </div>
+            </div>
+            
+            <div class="col-md-2 card card-statistic flat">
+                <div class="card-body">
+                    <h3 class="statistic-icon d-flex justify-content-center no-margin">
+                        999+
+                    </h3>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="card flat">
+                    <div class="card-body">
+                        <table class="table text-12">
+                            <thead>
+                                <tr>
+                                    <th>Campaign id</th>
+                                    <th>Campaign name</th>
+                                    <th>Status</th>
+                                    <th>Gross cost</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>D253D99C-90AC-EBBF-C1EB-A66798E96F02</td>
+                                    <td>Nam Company</td>
+                                    <td><span class="badge badge-success">delivering</span></td>
+                                    <td>$8514.41</td>
+                                    <td>Tue, 28th, 2020</td>
+                                    <td>Thu, 26th, 2019 </td>
+                                </tr>
+                                <tr>
+                                    <td>28849362-3ABB-43F8-AA54-1D27EDAABDC5</td>
+                                    <td>Dictum Placerat Augue Industries</td>
+                                    <td><span class="badge badge-success">delivering</span></td>
+                                    <td>$4421.93</td>
+                                    <td>Fri, 6th, 2020</td>
+                                    <td>Tue, 16th, 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>A571567A-F553-BE40-5618-94B1D008D554</td>
+                                    <td>Neque Inc.</td>
+                                    <td><span class="badge badge-secondary">completed</span></td>
+                                    <td>$1671.71</td>
+                                    <td>Thu, 9th, 2020</td>
+                                    <td>Mon, 20th, 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>21FC902B-BA77-8BF8-A228-8B0B11009068</td>
+                                    <td>Aenean PC</td>
+                                    <td><span class="badge badge-info">ready</span></td>
+                                    <td>$1713.68</td>
+                                    <td>Wed, 23rd, 2019</td>
+                                    <td>Wed, 7th, 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>C6A796B2-8C49-AF77-F2F1-80BEF0B9CF25</td>
+                                    <td>Sapien Consulting</td>
+                                    <td><span class="badge badge-warning">pending</span></td>
+                                    <td>$1074.19</td>
+                                    <td>Mon, 13th, 2020</td>
+                                    <td>Thu, 22nd, 2018</td>
+                                </tr>
+                                <tr>
+                                    <td>3ED784BC-C4D8-B63A-85E5-07360DE56AB2</td>
+                                    <td>Mauris Morbi Non Consulting</td>
+                                    <td><span class="badge badge-info">ready</span></td>
+                                    <td>$2045.95</td>
+                                    <td>Tue, 23rd, 2019</td>
+                                    <td>Thu, 5th, 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>1A611208-69FE-B2A9-C3A5-7A98335B05C7</td>
+                                    <td>Augue LLC</td>
+                                    <td><span class="badge badge-danger">need creative</span></td>
+                                    <td>$5545.90</td>
+                                    <td>Thu, 5th, 2019</td>
+                                    <td>Mon, 19th, 2018</td>
+                                </tr>
+                                <tr>
+                                    <td>270CD9C9-67EA-D662-1820-1D30F044C361</td>
+                                    <td>Blandit PC</td>
+                                    <td><span class="badge badge-default">draft</span></td>
+                                    <td>$8912.51</td>
+                                    <td>Thu, 9th, 2018</td>
+                                    <td>Wed, 8th, 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>4578FC29-3F1D-53F1-3A23-E310C81DA076</td>
+                                    <td>Hendrerit Consectetuer Corp.</td>
+                                    <td><span class="badge badge-info">ready</span></td>
+                                    <td>$9264.02</td>
+                                    <td>Wed, 3rd, 2019</td>
+                                    <td>Fri, 12th, 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>1B03A0D6-2BCB-2258-6482-02C5BEF82042</td>
+                                    <td>Urna Associates</td>
+                                    <td><span class="badge badge-success">delivering</span></td>
+                                    <td>$7714.32</td>
+                                    <td>Sun, 5th, 2020</td>
+                                    <td>Fri, 25th, 2019</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<footer>
+    
+    <div class=" d-flex justify-content-center">
+        <div class="col-md-12">
+            <p class="text-secondary text-center text-12">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cumque consequatur laboriosam porro repellendus <br>
+                angkods &copy; 2019
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>  
+<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+<script src="../js/main-chart.js"></script>
+</body>
+</html>

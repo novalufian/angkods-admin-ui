@@ -1,12 +1,13 @@
 .navbar {
     background: #ffffff !important;
-
+    
     & .navbar-brand{
         & .brand-icon{
             height: 35px;
+            margin : 0 7.5px;
         }
     }
-
+    
     .top-notif{
         padding: 5px 10px;
         display: inline-block;
@@ -15,27 +16,27 @@
         text-align: center;
         color: #b5b5b5;
     }
-
+    
     .navbar-nav{
         font-size: 13px;
-
+        
         & .nav-item{
             margin: 0 10px;
         }
-    
+        
         .dropdown.navbar-top-menu{
             background: #ececec;
             border-radius: 100px;
-    
-            & .dropdown-toggle{
             
+            & .dropdown-toggle{
+                
                 font-size: 13px;
                 padding: 6px 8px;
-    
+                
                 &::after{
                     display: none !important;
                 }
-    
+                
                 & .rounded{
                     border-radius: 30px !important;
                     box-shadow: 0 0 0 2px #71ec00;
@@ -44,6 +45,59 @@
                 
             }
         }
-    
+        
     }
+}
+
+
+#menu-bar{
+    // position: fixed;
+    width: 50px;
+    background: #ffffff;
+    position: relative;
+    transition: all .25s ease-in-out;
+    padding-top: 75px;
+    
+    &.active{
+        width: 250px;
+        
+        // &:after{
+        //     content: "";
+        //     width: 100%;
+        //     height: 100vh;
+        //     position: fixed;
+        //     background: #00000010;
+        //     z-index: 9;
+        //     left: 300px;
+        //     right: 0;
+        // }
+    }
+    
+    .main-menu{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
+        .list-group{
+            .list-group-item{
+                border: none;
+                font-size: 14px;
+                cursor: pointer;
+                display: inherit;
+                padding: .75rem 1.75rem;
+
+                .icon{
+                    line-height: 14px;
+                    margin-right: 15px;
+                }
+
+                p{
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+    
+    
 }
