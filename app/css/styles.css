@@ -10730,9 +10730,10 @@ body {
 }
 
 #menu-bar .main-menu {
-  position: absolute;
+  position: fixed;
   height: 100vh;
-  width: 100%;
+  width: 250px;
+  top: 100px;
   overflow: hidden;
 }
 
@@ -10742,15 +10743,44 @@ body {
   cursor: pointer;
   display: inherit;
   padding: .75rem 1.75rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  margin: 0 20px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
 }
 
 #menu-bar .main-menu .list-group .list-group-item .icon {
-  line-height: 14px;
+  line-height: 20px;
   margin-right: 15px;
+  font-size: 20px;
 }
 
 #menu-bar .main-menu .list-group .list-group-item p {
-  line-height: 15px;
+  line-height: 20px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+#menu-bar .main-menu .list-group .list-group-item.active {
+  background: rgba(97, 74, 211, 0.25);
+}
+
+#menu-bar .main-menu .list-group .list-group-item.active p {
+  color: #614ad3;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+#menu-bar .main-menu .list-group .list-group-item:hover {
+  background: rgba(97, 74, 211, 0.1);
+}
+
+#menu-bar .main-menu .list-group .list-group-item:hover p {
+  color: rgba(97, 74, 211, 0.75);
+  font-weight: bold;
+  margin-left: 5px;
 }
 
 .card {
