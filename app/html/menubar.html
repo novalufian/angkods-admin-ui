@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My angkods dashboard</title>
     
     <link rel="stylesheet" href="../css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
     <link rel="stylesheet" href="../css/icon.css">
+    <link rel="shortcut icon" href="https://miro.medium.com/max/1200/1*gOtFeO2p_WSenEhVFyhMig.png" />
+
     
     <link rel="stylesheet" href="../css/icofont.min.css">
     
@@ -18,30 +20,36 @@
         <aside id="menu-bar" data-menu-expand="false">
             <div class="main-menu">
                 <ul class="list-group">
-                    <li class="list-group-item">
+                    <li class="list-group-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
                         <p data-icon="a" class="icon no-margin"></p> 
                         <p class="no-margin">Dashboard</p>
                     </li>
-                    <li class="list-group-item active">
+                    <li class="list-group-item " data-toggle="tooltip" data-placement="right" title="Campaign">
                         <p class="icon icon-basic-cards-diamonds no-margin"></p>
                         <p class="no-margin">Campaign</p>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Payment">
                         <p data-icon="q" class="icon no-margin"></p> 
-                        <p class="no-margin">Billing</p>
+                        <p class="no-margin">Payment</p>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Insight">
                         <p class="no-margin icon icon-basic-signs"></p>
                         <p class="no-margin">Insight</p>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Ads Showcase">
+                            <p class="no-margin icon icon-basic-lightbulb"></p>
+                            <p class="no-margin">Ads Showcase</p>
+                        </li>
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Suport">
                         <p class="no-margin icon icon-basic-question"></p>
                         <p class="no-margin">Suport</p>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Profile">
                         <p class="no-margin icon icon-basic-anchor"></p>
                         <p class="no-margin">Profile</p>    
                     </li>
+                    <span class="hover"></span>
+                    <span class="active-item"></span>
                 </ul>
             </div>
         </aside>
@@ -96,7 +104,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="card flat">
-                        <div class="card-header">
+                        <div class="card-header no-padding-lr">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="dropdown">
@@ -126,12 +134,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            
-                            
+                        <div class="card-body no-padding-lr">
                             <canvas  id="myChart" width="400" height="153"></canvas>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer no-padding">
                             <p class="col-md-12 text-right text-12 text-secondary">total impression on july - campaign : <i class="text-primary">sarden abc event rekormuri</i></p>
                         </div>
                     </div>

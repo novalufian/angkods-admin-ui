@@ -61,9 +61,18 @@ body {
     margin: 0;
 } 
 
+.no-padding-lr{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
 .body-container{
     padding-top: 100px;
-    min-height: calc(100vh - 100px);
+    min-height: 100vh;
 }
 
 .text-12{
