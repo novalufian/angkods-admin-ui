@@ -113,6 +113,9 @@
         transition: all .25s ease-in-out;
         
         .list-group{
+            min-height: calc(100vh - 150px);
+            position: relative;
+ 
             .list-group-item{
                 border: none;
                 font-size: 14px;
@@ -124,6 +127,11 @@
                 margin: 0 10px;
                 transition: all .15s ease-in-out;
                 background: transparent;
+
+                &.item-fix-bottom{
+                    position: absolute;
+                    bottom: 0;
+                }
                 
                 .icon{
                     line-height: 20px;
@@ -179,6 +187,7 @@
                 margin: 0 10px;
                 border-radius: 10px;
                 background: rgba($color:  theme-color("primary"), $alpha: .25);
+                border-left: solid 2px rgba($color:  theme-color("primary"), $alpha: 1);
                 z-index: -1;
                 top: 0px;
                 transition: all.15s ease-in-out;

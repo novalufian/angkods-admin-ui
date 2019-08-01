@@ -1,8 +1,21 @@
+.btn{
+    cursor: pointer;
+}
+
 @each $color, $value in $theme-colors {
     .btn-#{$color} {
         @include button-variant($value, $value);
         border : solid 2px darken($value, 10%);
+
+        &.inset-shadow{
+            box-shadow: 0 5px 15px -5px rgba($color: $value, $alpha: .4)
+        }
     }
+}
+
+.btn-flat{
+    border: none;
+    border-radius: 0px;
 }
 
 .btn-group{
@@ -25,5 +38,11 @@
             }
         }
     }
-    
 }
+
+
+.button-fix-right-botom {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }

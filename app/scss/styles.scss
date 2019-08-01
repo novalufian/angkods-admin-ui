@@ -18,12 +18,14 @@ $cyan:    #17a2b8 !default;
 
 $theme-colors: (
     // "primary":    #0074e4,
-    "primary":    #614ad3,
+    // "primary":    #614ad3,
+    "primary" :   #116BFE,
     "secondary":  #b0b0b0 ,
     "success":    #00bd56,
     "info":       #93deff,
     "warning":    #ffd933,
     "danger":     #f30e5c,
+    "white":     #ffffff,
     "light":      $light,
     "dark":       $dark
 );
@@ -51,6 +53,13 @@ body {
 
 .mb-30{
     margin-bottom: 30px;
+}
+.margin-left{
+    margin-left:30px;
+}
+
+.margin-top-50{
+    margin-top: 50px;
 }
 
 .margin-25{
@@ -129,6 +138,10 @@ body {
     margin-top: 100px;
 }
 
+.text-white{
+    color: #fff;
+}
+
 @import "_navbar";
 @import "_card";
 @import "_dropdown";
@@ -140,6 +153,11 @@ body {
     &.bg-#{$color} {
         background:$value;
     }
+}
+
+.page-title{
+    letter-spacing: -1px;
+    margin-bottom: 2rem;
 }
 
 
