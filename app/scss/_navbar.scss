@@ -57,8 +57,7 @@
     position: relative;
     transition: all .25s ease-in-out;
     padding-top: 75px;
-    
-    
+    z-index: 999;
     
     &.active{
         width: 250px;

@@ -4,6 +4,10 @@ var menuitem = document.querySelectorAll(".main-menu .list-group .list-group-ite
 var menuitemHover = document.querySelector("#menu-bar .main-menu .list-group .hover");
 var menuAcitved = document.querySelector("#menu-bar .main-menu .list-group .list-group-item.active");
 var menuitemActive = document.querySelector("#menu-bar .main-menu .list-group .active-item");
+var formWizardTracker = document.querySelector(".form-wizard-tracker");
+
+var mainContainerWrapper = document.getElementById("main-content-wrapper");
+var mainPrelaoding = document.getElementById("main-preloading");
 
 init();
 
@@ -15,6 +19,7 @@ function init() {
     menuitemActive.style.top = menuAcitved.offsetTop + "px";
     
     buttonMenu.addEventListener("click", fnActiveMenuBar);
+    formWizard(false);
 }
 
 function fnActiveMenuBar() {
@@ -26,12 +31,15 @@ function fnActiveMenuBar() {
         $(function () {
             $('[data-toggle="tooltip"]').tooltip("enable");
         })
+        formWizard(false);
+
     }else{
         isExpand = "true";
         menuBarContainer.classList.add("active");
         $(function () {
             $('[data-toggle="tooltip"]').tooltip("disable")
         })
+        formWizard(true);
     }
     
     menuBarContainer.setAttribute("data-menu-expand",isExpand );
@@ -91,5 +99,32 @@ function activeMenuItem(){
     this.classList.add("active");
     menuitemActive.style.top = this.offsetTop + "px";
     resetMenuItem();
+
+    preloading(true);
 }
 
+
+function formWizard(isTrue) {
+    var leftV = (isTrue) ? 250 : 75;
+    if(formWizardTracker){
+        formWizardTracker.style.width = `calc(100% - ${leftV}px)`;
+    }
+}
+
+function preloading(isTrue) {
+    if(isTrue){
+        mainPrelaoding.classList.add("active");
+        setTimeout(function () {
+            mainContainerWrapper.classList.add("preloading-active");
+
+            setTimeout(function(){
+                preloading(false)
+            }, 2000)
+        }, 350);
+    }else{
+        setTimeout(function(){
+            mainPrelaoding.classList.remove("active");
+        }, 350)
+        mainContainerWrapper.classList.remove("preloading-active");
+    }
+}

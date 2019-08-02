@@ -10787,6 +10787,9 @@ body {
 .body-container {
   padding-top: 100px;
   min-height: 100vh;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  overflow: hidden;
 }
 
 .text-12 {
@@ -10905,6 +10908,7 @@ body {
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
   padding-top: 75px;
+  z-index: 999;
 }
 
 #menu-bar.active {
@@ -12421,6 +12425,86 @@ body {
 
 .dashed-white {
   border: dashed 2px #ffffff;
+}
+
+.form-wizard-tracker {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 7px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.form-wizard-tracker .list-tracker {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.form-wizard-tracker .list-tracker li {
+  width: 20%;
+  display: inline-block;
+  position: relative;
+  height: 7px;
+  opacity: .2;
+}
+
+.form-wizard-tracker .list-tracker li.active {
+  height: 10px;
+  opacity: 1;
+}
+
+.preloading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.preloading:after, .preloading:before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 50vh;
+  left: 0;
+  background: #ffffff50;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.preloading:after {
+  top: -100vh;
+}
+
+.preloading:before {
+  bottom: -100vh;
+}
+
+.preloading.active {
+  cursor: no-drop;
+}
+
+.preloading.active:after {
+  top: 0;
+}
+
+.preloading.active:before {
+  bottom: 0;
+}
+
+.preloading-active {
+  -webkit-filter: blur(2.5px);
+          filter: blur(2.5px);
+  overflow: hidden;
+  cursor: no-drop;
 }
 
 .bg-primary {
