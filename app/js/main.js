@@ -82,10 +82,14 @@ function menuActiveIndex(){
 }
 
 function resetMenuItem() {
+    console.log("leave")
     menuitemHover.style.opacity = "0";
     menuitem.forEach(function(el, i){
         el.style.borderRadius = "10px";
     })
+
+    menuitemActive.style.borderRadius = "10px";
+    menuitemHover.style.borderRadius = "10px ";
 }
 
 function activeMenuItem(){
