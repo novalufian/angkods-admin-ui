@@ -10759,6 +10759,10 @@ body {
   margin-bottom: 30px;
 }
 
+.mb-45 {
+  margin-bottom: 45px !important;
+}
+
 .margin-left {
   margin-left: 30px;
 }
@@ -12432,9 +12436,7 @@ body {
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 7px;
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
+  height: 10px;
 }
 
 .form-wizard-tracker .list-tracker {
@@ -12449,13 +12451,92 @@ body {
   width: 20%;
   display: inline-block;
   position: relative;
-  height: 7px;
+  height: 5px;
+  margin-top: 5px;
   opacity: .2;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .form-wizard-tracker .list-tracker li.active {
   height: 10px;
   opacity: 1;
+  margin-top: 0px;
+}
+
+.form-group {
+  margin: 1.2rem 0;
+}
+
+.form-group textarea,
+.form-group input {
+  background: transparent;
+  font-size: 12px;
+  padding: 15px 15px 10px;
+  height: unset;
+}
+
+.form-group textarea:focus,
+.form-group input:focus {
+  background: transparent;
+}
+
+.form-group textarea::-webkit-input-placeholder,
+.form-group input::-webkit-input-placeholder {
+  color: #212121;
+}
+
+.form-group textarea:-ms-input-placeholder,
+.form-group input:-ms-input-placeholder {
+  color: #212121;
+}
+
+.form-group textarea::-ms-input-placeholder,
+.form-group input::-ms-input-placeholder {
+  color: #212121;
+}
+
+.form-group textarea::placeholder,
+.form-group input::placeholder {
+  color: #212121;
+}
+
+.form-group .label-form {
+  position: absolute;
+  background: #fff;
+  font-size: 10px;
+  top: -7px;
+  left: 25px;
+  z-index: 9;
+  padding: 0 10px;
+}
+
+.form-group.error:after {
+  content: "error";
+  position: absolute;
+  right: 0;
+  background: #fff;
+  top: -9px;
+  z-index: 9999999;
+  font-size: 12px;
+  padding: 0 5px;
+  color: #f30e5c;
+  margin-right: 10px;
+}
+
+.form-group.error input {
+  border: solid 1px #f30e5c;
+}
+
+.form-group.verify:after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  width: 15px;
+  height: 15px;
+  background: #00bd56;
+  top: calc((45px - 15px) / 2);
+  border-radius: 100%;
 }
 
 .preloading {
