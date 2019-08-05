@@ -155,6 +155,7 @@ body {
 @import "_icon";
 @import "_form";
 @import "_preloading";
+@import "_maps.scss";
 
 @each $color, $value in $theme-colors {
     &.bg-#{$color} {

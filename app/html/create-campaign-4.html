@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
     
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    
     <link rel="stylesheet" href="../css/icofont.min.css">
     
 </head>
@@ -117,82 +119,7 @@
             
             <div class="d-flex justify-content-center bg-white">
                 <div class="card col-md-12 flat row">
-                    <div class="d-flex flex-row">
-                        <form class="form col-md-8">
-                            <h4 class="col-md-12 title-bold text-primary no-margin">campaign token order</h4>
-                            <p class="col-md-12 text-secondary mb-30 text-12">#878-9089-98798-8768</p>
-                            
-                            <div class="row">
-                                <div class="form-group col-md-6 success">
-                                    <label class="text-12 text-secondary label-form ">Campaign name</label>
-                                    <input type="text" class="form-control col-md-12 " placeholder="Campaign name" value="campaign J-trush bank JICONFEST">
-                                </div>
-                                <div class="form-group col-md-6 error">
-                                    <label class="text-12 text-secondary label-form">Product</label>
-                                    <input type="text" class="form-control col-md-12" placeholder="Campaign name" value="R2/098-09a-bc98">
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label class="text-12 text-secondary label-form">Brand</label>
-                                    <input type="text" class="form-control col-md-12" placeholder="Campaign name" >
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="text-12 text-secondary label-form">Industry</label>
-                                    <input type="text" class="form-control col-md-12" placeholder="Campaign name" >
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="form-group col-md-6 verify">
-                                    <label class="text-12 text-secondary label-form">BPOM product Number</label>
-                                    <input type="text" class="form-control col-md-12" placeholder="876 - 098 098 65 4 334" >
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="text-12 text-secondary label-form">Industry</label>
-                                    <input type="text" class="form-control col-md-12" placeholder="Campaign name" >
-                                </div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="form-group col-md-12">
-                                    <label class="text-12 text-secondary label-form">Campaign description</label>
-                                    <textarea class="form-control col-md-12 " name="" id="" cols="30" rows="8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae illum, totam inventore voluptatum enim recusandae veniam expedita eveniet 
-                                    </textarea>
-                                </div>
-                            </div>
-                            
-                            <div class="row mb-45">
-                                <div class="form-group col-md-6">
-                                    <label class="text-12 text-secondary label-form">Campaign start date</label>
-                                    <input type="date" class="form-control col-md-12" placeholder="Campaign name" >
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label class="text-12 text-secondary label-form">Campaign end date</label>
-                                    <input type="date" class="form-control col-md-12" placeholder="Campaign name" >
-                                </div>
-                            </div>
-                        </form>
-                        
-                        <div class="col-md-4">
-                            <h4 class="col-md-12 title-bold text-primary no-margin text-right">Advertiser</h4>
-                            <p class="col-md-12 text-secondary mb-30 text-12 text-right">curent advertiser in this campaign</p>
-                            
-                            <form class="form">
-                                <div class="row">
-                                    <div class="form-group text-right col-md-12">
-                                        <img src="https://via.placeholder.com/150"  class="mb-30">
-                                        <p>PT. Advertiser one day</p>
-                                        <p class="no-margin text-12 ">Phon : 360-577-0583</p>
-                                        <p class="no-margin text-12 text-secondary">3571 Waywood Way</p>
-                                        <p class="no-margin text-12 text-secondary">Philippines</p>
-                                        
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                        <div id="map" class="map"></div>
                     
                 </div>
             </div>
@@ -201,7 +128,7 @@
                 <button class="btn btn-white btn-flat inset-shadow">
                     <span class=" lni-arrow-left "></span>
                 </button>
-                <span class="btn">2 / 5</span>
+                <span class="btn">4 / 5</span>
                 <button class="btn btn-primary btn-flat inset-shadow">
                     Next
                     <span class=" lni-arrow-right text-white margin-left"></span>
@@ -210,10 +137,10 @@
             
             <div class="form-wizard-tracker">
                 <ul class="list-tracker d-flex">
-                    <li class="bg-primary active"></li>
+                    <li class="bg-primary "></li>
                     <li class="bg-warning"></li>
                     <li class="bg-danger "></li>
-                    <li class="bg-success"></li>
+                    <li class="bg-success active"></li>
                     <li class="bg-info"></li>
                 </ul>
             </div>
@@ -229,10 +156,35 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> 
+    
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    
     <script src="../js/main-chart.js"></script>
     <script src="../js/main.js"></script>
     <script>
         $('.your-element').tilt();
+        
+        var geodata = [];
+        
+        var map = new ol.Map({
+            target: 'map',
+            layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([112.64007568359371, -7.988970949627415]),
+                zoom: 12
+            })
+        });
+        
+        map.on('click', function(evt){
+            var res = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+            geodata.push(res);
+            console.log(JSON.stringify(geodata));
+        });
+        
     </script>
 </body>
 </html>

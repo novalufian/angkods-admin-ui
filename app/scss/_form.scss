@@ -80,6 +80,11 @@
     }
     
     &.verify{
+
+        .form-control{
+            color: theme-color("success");
+        }
+
         &:after{
             content: "";
             position: absolute;

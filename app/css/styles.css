@@ -12528,6 +12528,10 @@ body {
   border: solid 1px #f30e5c;
 }
 
+.form-group.verify .form-control {
+  color: #00bd56;
+}
+
 .form-group.verify:after {
   content: "";
   position: absolute;
@@ -12633,6 +12637,14 @@ body {
   95% {
     content: "...";
   }
+}
+
+#map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
 }
 
 .bg-primary {
