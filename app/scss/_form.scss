@@ -97,3 +97,12 @@
         }
     }
 }
+
+.targting-form{
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: calc(100vh - 225px);
+    right: 50px;
+    padding-top: 15px;
+}

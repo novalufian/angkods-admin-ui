@@ -1,0 +1,29 @@
+.alert{
+    margin-bottom: 5px;
+    border-radius: 15px;
+    
+    p{
+        margin: 0px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &.item{
+        cursor: pointer;
+    }
+    
+}
+
+@each $color, $value in $theme-colors {
+    .alert-#{$color} {
+        border : none;
+        color: darken($color: $value, $amount: 10%);
+        background: rgba($value, .15);
+        padding: 20px;
+        
+        p{
+            color: darken($color: $value, $amount: 10%);
+        }
+    }
+}

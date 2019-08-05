@@ -18,7 +18,7 @@ $cyan:    #17a2b8 !default;
 
 $theme-colors: (
     // "primary":    #0074e4,
-    // "primary":    #614ad3,
+    "purple":    #614ad3,
     "primary" :   #116BFE,
     "secondary":  #b0b0b0 ,
     "success":    #00bd56,
@@ -47,6 +47,10 @@ body {
     // background: #0F141A;
 }
 
+.min-height{
+    height: calc(100vh - 125px);
+}
+
 .margin-tb-30x{
     margin: 30px 0;
 }
@@ -59,6 +63,9 @@ body {
 }
 .margin-left{
     margin-left:30px;
+}
+.br-5{
+    border-radius: 5px !important;
 }
 
 .margin-top-50{
@@ -87,19 +94,13 @@ body {
     min-height: 100vh;
     transition: all .25s ease-in-out;
     overflow: hidden;
-}
-
-.text-12{
-    font-size: 12px;
+    position: relative;
 }
 
 .chart{
     padding-top: 50px;
 }
 
-.title-bold{
-    font-weight: bold;
-}
 
 .top-notif{
     font-size: 13px;
@@ -135,18 +136,13 @@ body {
     }
 }
 
-.font-800{
-    font-weight: 800;
-}
-
 .footer-main{
     margin-top: 100px;
 }
 
-.text-white{
-    color: #fff;
-}
 
+
+@import "_text";
 @import "_navbar";
 @import "_card";
 @import "_dropdown";
@@ -156,6 +152,8 @@ body {
 @import "_form";
 @import "_preloading";
 @import "_maps.scss";
+@import "_alert.scss";
+
 
 @each $color, $value in $theme-colors {
     &.bg-#{$color} {
