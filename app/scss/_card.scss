@@ -95,7 +95,8 @@
     }
 
     &.card-line-dash{
-        border: dashed 1px rgba(theme-color("secondary"), .2);
+        border: dashed 1px rgba(theme-color("primary"), .2);
+        background: rgba(theme-color("primary"), .02);
     }
 }
 
@@ -254,5 +255,22 @@
     100%{
         transform: scale(1);
         border: 1px solid rgba(126, 126, 126, 0);
+    }
+}
+
+.choose-ads-type{
+
+    cursor: pointer;
+
+    input{
+        display: none;
+    }
+
+    .card-ads-type{
+        transition: all .05s ease-in-out;
+
+        &.active{
+            border: solid 1px rgba(theme-color("primary"), .55);
+        }
     }
 }

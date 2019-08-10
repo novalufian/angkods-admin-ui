@@ -127,53 +127,50 @@
                     
                     <div class="d-flex flex-column min-height">
                         <div class="d-flex justify-content-center">
-                            <div class="col-md-3">
-                                <div class="card card-line">
+                            <div class="col-md-3 choose-ads-type">
+                                <input type="checkbox">
+                                <div class="card card-line card-ads-type ">
                                     <div class="card-body">
                                         <img src="../images/image4.png" class="img-responsive">
                                     </div>
                                     <div class="card-footer bg-white">
-                                        <h5 class="text-center text-bold text-primary">Lorem ipsum dolor</h5>
+                                        <h5 class="text-center text-bold text-primary">Front / back ads</h5>
                                         <p class="text-center text-secondary text-12"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur tempora alias!</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card card-line">
+                            <div class="col-md-3 choose-ads-type">
+                                <input type="checkbox">
+                                <div class="card card-line card-ads-type">
                                     <div class="card-body">
                                         <img src="../images/image2.png" class="img-responsive">
                                     </div>
                                     <div class="card-footer bg-white">
-                                        <h5 class="text-center text-bold text-primary">Lorem ipsum dolor</h5>
+                                        <h5 class="text-center text-bold text-primary">Side ads</h5>
                                         <p class="text-center text-secondary text-12"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur tempora alias!</p>
+                                        <!-- <a href="" class="btn btn-primary btn-flat">more info <i class="lni-question-circle text-white"></i></a> -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="card card-line">
+                            <div class="col-md-3 choose-ads-type">
+                                <input type="checkbox">
+                                <div class="card card-line card-ads-type ">
                                     <div class="card-body">
                                         <img src="../images/image4.png" class="img-responsive">
                                     </div>
                                     <div class="card-footer bg-white">
-                                        <h5 class="text-center text-bold text-primary">Lorem ipsum dolor</h5>
+                                        <h5 class="text-center text-bold text-primary">All around ads</h5>
                                         <p class="text-center text-secondary text-12"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur tempora alias!</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="d-flex justify-content-center margin-tb-30x">
-                            <div class="col-md-9">
-                                <div class="card card-line-dash">
-                                    <div class="card-body upload-file d-flex justify-content-center flex-column" id="upload-image">
-                                        <i class="lni-exit-up text-center text-secondary"></i>
-                                        <p class="text-center text-secondary text-12">upload your banner image</p>
-                                        <input type="file" id="upload-image-input">
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                            Launch demo modal
+                        </button> -->
                         
                         
                         
@@ -222,6 +219,50 @@
     
     
     
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <p>Front / back ads banner</p>
+                    <button type="button" class="close text-12" data-dismiss="modal" aria-label="Close">
+                        <i class="lni-close"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center flex-column no-margin">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="col-md-9 no-margin no-padding">
+                                    <h1><i class="lni-folder"></i></h1>
+                                    <p class="text-primary no-margin">Upload your attachments</p>
+                                    <p class="text-secondary text-12 no-margin">drag and drop your file here</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <div class="card card-line-dash card-ads-type-dash br-5 col-md-9">
+                                <div class="card-body upload-file d-flex justify-content-center flex-column" id="upload-image">
+                                    <i class="lni-exit-up text-center text-secondary"></i>
+                                    <p class="text-center text-secondary text-12">upload your banner image</p>
+                                    <input type="file" id="upload-image-input">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer col-md-12 d-flex justify-content-center">
+                    <div class="col-md-9 d-flex justify-content-end mb-45">
+                            <button type="button" class="btn btn-white btn-flat text-12 no-margin" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary btn-flat text-12 no-margin">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
@@ -238,6 +279,8 @@
         uploadBox.addEventListener("click", function () {
             uploadInput.click();
         })
+        
+        $('#exampleModalCenter').modal("show")
         
     </script>
 </body>

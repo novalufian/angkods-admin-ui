@@ -1,6 +1,7 @@
 var buttonMenu = document.getElementById("menu-bar-btn");
 var menuBarContainer = document.getElementById("menu-bar");
 var menuitem = document.querySelectorAll(".main-menu .list-group .list-group-item");
+var adsTypeItem = document.querySelectorAll(".choose-ads-type");
 var menuitemHover = document.querySelector("#menu-bar .main-menu .list-group .hover");
 var menuAcitved = document.querySelector("#menu-bar .main-menu .list-group .list-group-item.active");
 var menuitemActive = document.querySelector("#menu-bar .main-menu .list-group .active-item");
@@ -11,6 +12,16 @@ var mainPrelaoding = document.getElementById("main-preloading");
 
 init();
 
+menuitem.forEach(function(el, i){
+	el.addEventListener("mouseover", function(){
+        hoverMenuItem(i, el)
+    })
+    
+    el.addEventListener("mouseleave", resetMenuItem);
+    
+    el.addEventListener("click", activeMenuItem)
+})
+
 function init() {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip("enable");
@@ -20,7 +31,35 @@ function init() {
     
     buttonMenu.addEventListener("click", fnActiveMenuBar);
     formWizard(false);
+
+    adsTypeFun();
+    console.log("init")
 }
+
+function adsTypeFun(){
+    console.log("ok")
+    if (adsTypeItem) {
+        adsTypeItem.forEach(function (el, i) {
+            el.addEventListener("click", chooseAdsType);
+            console.log(el)
+        })
+    }
+}
+
+function chooseAdsType() {
+    var wrapper = this;
+    var checkbox = wrapper.querySelector('input');
+    checkbox.checked = !checkbox.checked;
+    if(checkbox.checked){
+        wrapper.querySelector(".card-ads-type").classList.add("active");
+    }else{
+        wrapper.querySelector(".card-ads-type").classList.remove("active");
+    }
+    console.log(checkbox.checked);
+
+}
+
+
 
 function fnActiveMenuBar() {
     var isExpand = menuBarContainer.getAttribute("data-menu-expand");
@@ -44,16 +83,6 @@ function fnActiveMenuBar() {
     
     menuBarContainer.setAttribute("data-menu-expand",isExpand );
 }
-
-menuitem.forEach(function(el, i){
-	el.addEventListener("mouseover", function(){
-        hoverMenuItem(i, el)
-    })
-    
-    el.addEventListener("mouseleave", resetMenuItem);
-    
-    el.addEventListener("click", activeMenuItem)
-})
 
 function hoverMenuItem(i, el){
     var activeEl = menuActiveIndex();
@@ -106,7 +135,6 @@ function activeMenuItem(){
 
     preloading(true);
 }
-
 
 function formWizard(isTrue) {
     var leftV = (isTrue) ? 250 : 75;

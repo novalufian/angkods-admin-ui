@@ -10949,7 +10949,7 @@ body {
 }
 
 .no-margin {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .no-padding-lr {
@@ -11329,7 +11329,8 @@ body {
 }
 
 .card.card-line-dash {
-  border: dashed 1px rgba(176, 176, 176, 0.2);
+  border: dashed 1px rgba(17, 107, 254, 0.2);
+  background: rgba(17, 107, 254, 0.02);
 }
 
 .card-item {
@@ -11600,6 +11601,23 @@ body {
             transform: scale(1);
     border: 1px solid rgba(126, 126, 126, 0);
   }
+}
+
+.choose-ads-type {
+  cursor: pointer;
+}
+
+.choose-ads-type input {
+  display: none;
+}
+
+.choose-ads-type .card-ads-type {
+  -webkit-transition: all .05s ease-in-out;
+  transition: all .05s ease-in-out;
+}
+
+.choose-ads-type .card-ads-type.active {
+  border: solid 1px rgba(17, 107, 254, 0.55);
 }
 
 .dropdown.navbar-top-menu {
@@ -13141,6 +13159,14 @@ body {
 
 .alert-white p {
   color: #e6e6e6;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+  border-top: none;
 }
 
 .bg-primary {
