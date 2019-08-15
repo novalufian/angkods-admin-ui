@@ -11120,7 +11120,7 @@ body {
 }
 
 #menu-bar.active .main-menu .list-group .list-group-item p {
-  margin-left: 5px;
+  margin-left: 10px !important;
   opacity: 1;
 }
 
