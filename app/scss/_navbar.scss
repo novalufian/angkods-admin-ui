@@ -194,3 +194,25 @@
         }
     }
 }
+
+@media only screen and (max-width: 1390px) {
+    #menu-bar{
+        width: 75px;
+        background: #ffffff;
+        position: fixed;
+        transition: all .25s ease-in-out;
+        padding-top: 75px;
+        z-index: 999;
+        height: 100vh;
+    }
+
+    .body-container {
+        padding-top: 100px;
+        min-height: 100vh;
+        -webkit-transition: all .25s ease-in-out;
+        transition: all .25s ease-in-out;
+        overflow: hidden;
+        position: relative;
+        padding-left: 75px !important;
+    }
+  }
