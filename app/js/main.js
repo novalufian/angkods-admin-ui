@@ -2,9 +2,10 @@ var buttonMenu = document.getElementById("menu-bar-btn");
 var menuBarContainer = document.getElementById("menu-bar");
 var menuitem = document.querySelectorAll(".main-menu .list-group .list-group-item");
 var adsTypeItem = document.querySelectorAll(".choose-ads-type");
-var menuitemHover = document.querySelector("#menu-bar .main-menu .list-group .hover");
 var menuAcitved = document.querySelector("#menu-bar .main-menu .list-group .list-group-item.active");
-var menuitemActive = document.querySelector("#menu-bar .main-menu .list-group .active-item");
+var menuitemHover = null;
+var menuitemActive = null;
+var menuOverlayActive = null;
 var formWizardTracker = document.querySelector(".form-wizard-tracker");
 
 var mainContainerWrapper = document.getElementById("main-content-wrapper");
@@ -23,6 +24,8 @@ menuitem.forEach(function(el, i){
 })
 
 function init() {
+    addMenuEffect();
+
     $(function () {
         $('[data-toggle="tooltip"]').tooltip("enable");
     })
@@ -33,7 +36,31 @@ function init() {
     formWizard(false);
 
     adsTypeFun();
-    console.log("init")
+    console.log("init");
+
+    window.addEventListener("resize", onWindowResize);
+}
+
+function addMenuEffect() {
+    var warapper = menuBarContainer.querySelector(".main-menu .list-group");
+
+    var hoverspan = document.createElement("span");
+    hoverspan.setAttribute("class", "hover");
+    warapper.appendChild(hoverspan);
+
+    var activespan = document.createElement("span");
+    activespan.setAttribute("class", "active-item");
+    warapper.appendChild(activespan);
+
+    var overlayspan = document.createElement("span");
+    overlayspan.setAttribute("id", "menu-bar-overlay");
+    overlayspan.style.display = "none";
+    overlayspan.addEventListener("click", fnActiveMenuBar);
+    menuBarContainer.parentElement.appendChild(overlayspan);
+
+    menuitemHover = document.querySelector("#menu-bar .main-menu .list-group .hover");
+    menuitemActive = document.querySelector("#menu-bar .main-menu .list-group .active-item");
+    menuOverlayActive = document.querySelector("#menu-bar-overlay");
 }
 
 function adsTypeFun(){
@@ -59,10 +86,9 @@ function chooseAdsType() {
 
 }
 
-
-
 function fnActiveMenuBar() {
     var isExpand = menuBarContainer.getAttribute("data-menu-expand");
+    var isSmallSreen = (document.body.clientWidth < 1390) ? true : false;
     
     if(isExpand == "true"){
         isExpand = "false";
@@ -71,7 +97,14 @@ function fnActiveMenuBar() {
             $('[data-toggle="tooltip"]').tooltip("enable");
         })
         formWizard(false);
+        setTimeout(function(){
+            menuOverlayActive.style.display = "none";
+        }, 250)
+        menuOverlayActive.classList.remove("active");
 
+        if(isSmallSreen){
+            mainContainerWrapper.classList.remove("preloading-active");
+        }
     }else{
         isExpand = "true";
         menuBarContainer.classList.add("active");
@@ -79,9 +112,17 @@ function fnActiveMenuBar() {
             $('[data-toggle="tooltip"]').tooltip("disable")
         })
         formWizard(true);
+        menuOverlayActive.style.display = "block";
+        menuOverlayActive.classList.add("active");
+
+        if(isSmallSreen){
+            mainContainerWrapper.classList.add("preloading-active");
+        }
+
     }
     
     menuBarContainer.setAttribute("data-menu-expand",isExpand );
+
 }
 
 function hoverMenuItem(i, el){
@@ -119,6 +160,7 @@ function resetMenuItem() {
 
     menuitemActive.style.borderRadius = "10px";
     menuitemHover.style.borderRadius = "10px ";
+
 }
 
 function activeMenuItem(){
@@ -154,9 +196,30 @@ function preloading(isTrue) {
             }, 2000)
         }, 350);
     }else{
+        var isExpand = menuBarContainer.getAttribute("data-menu-expand");
+        var isSmallSreen = (document.body.clientWidth < 1390) ? true : false;
+
+        if(isExpand !== "true"){ // false
+            mainContainerWrapper.classList.remove("preloading-active");
+        }else{ // true
+            if (!isSmallSreen) {
+                mainContainerWrapper.classList.remove("preloading-active");
+            }
+        }
         setTimeout(function(){
             mainPrelaoding.classList.remove("active");
         }, 350)
-        mainContainerWrapper.classList.remove("preloading-active");
+    }
+}
+
+function onWindowResize() {
+    var isExpand = menuBarContainer.getAttribute("data-menu-expand");
+    var isSmallSreen = (document.body.clientWidth < 1390) ? true : false;
+    if(isExpand == "true"){
+        if(isSmallSreen){
+            mainContainerWrapper.classList.add("preloading-active");
+        }else{
+            mainContainerWrapper.classList.remove("preloading-active");
+        }
     }
 }

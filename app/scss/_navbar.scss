@@ -215,4 +215,18 @@
         position: relative;
         padding-left: 75px !important;
     }
+    
+    #menu-bar-overlay {
+        position: fixed;
+        background: #00000030;
+        height: 100vh;
+        z-index: 998;
+        width: 100%;
+        transition: all .25s ease-in-out;
+        opacity: 0;
+
+        &.active{
+            opacity: 1;
+        }
+    }
   }
