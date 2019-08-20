@@ -33,6 +33,23 @@
 
 .form-group{
     margin: 1.2rem 0;
+
+    &.checkbox{
+        cursor: pointer;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        padding: 15px 15px 10px;
+
+        &.filter{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size:12px;
+            line-height: 16px;
+            vertical-align: middle;
+        }
+    }
+
+
     
     textarea,
     input{

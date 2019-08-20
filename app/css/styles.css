@@ -10961,6 +10961,10 @@ body {
   padding: 0px !important;
 }
 
+.no-border {
+  border: none !important;
+}
+
 .body-container {
   padding-top: 100px;
   min-height: 100vh;
@@ -12959,6 +12963,21 @@ body {
 
 .form-group {
   margin: 1.2rem 0;
+}
+
+.form-group.checkbox {
+  cursor: pointer;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: 15px 15px 10px;
+}
+
+.form-group.checkbox.filter {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  line-height: 16px;
+  vertical-align: middle;
 }
 
 .form-group textarea,
