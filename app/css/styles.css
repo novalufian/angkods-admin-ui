@@ -10965,6 +10965,14 @@ body {
   border: none !important;
 }
 
+.hidden {
+  display: none;
+}
+
+.fl-right {
+  float: right;
+}
+
 .body-container {
   padding-top: 100px;
   min-height: 100vh;
@@ -12975,9 +12983,29 @@ body {
 .form-group.checkbox.filter {
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   vertical-align: middle;
+}
+
+.form-group.checkbox .form-checkbox {
+  margin-right: 10px;
+}
+
+.form-group.checkbox .form-checkbox.uncheck:before {
+  content: "\f0c8";
+}
+
+.form-group.checkbox .form-checkbox.checked:before {
+  content: "\f14a";
+}
+
+.form-group.checkbox .text {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: calc(100% - 75px);
 }
 
 .form-group textarea,
