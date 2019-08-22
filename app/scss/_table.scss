@@ -1,0 +1,129 @@
+.t-div{
+    display: table;
+    width: 100%;
+    margin: 25px 0;
+
+    .t-head,
+    .t-foot,
+    .t-row{
+        display: table-row;
+        transition: all .25s ease-in-out;
+        cursor: pointer;
+
+        &.loading{
+            cursor: no-drop;
+            .t-cell{
+                span.loading{
+                    height: 25px;
+                    width: 80%;
+                    background: rgba($color: theme-color("secondary"), $alpha: .5);
+                    border-radius: 2px;
+                    margin: 5px 0;
+                    overflow: hidden;
+                    position: relative;
+                    
+                    &:after{
+                        top: 0;
+                        content: "";
+                        position: absolute;
+                        width: 50%;
+                        height: 15px;
+                        background: #ffffff70;
+                        animation: left-to-right 1s infinite;
+                    }
+                }
+
+                p{
+                    margin: 5px !important;
+                }
+            }
+        }
+
+        .t-cell{
+            display: table-cell;
+            
+            
+        }
+
+        &:hover{
+            transform: scale(1.025);
+        }
+
+        &.card{
+            .t-cell{
+                padding: 15px 10px;
+                border-right: solid 1px rgba(theme-color("secondary"), .1);
+
+                &:first-child{
+                    border-radius: 10px 0 0  10px;
+                }
+
+                &:last-child{
+                    border-radius: 0 10px 10px 0;
+                    border-right: none;
+                }
+
+                .fas{
+                    margin-right: 10px;
+                }
+
+                p{
+                    margin: 0px;
+
+                    .start-date {
+                        top: 7.5px;
+                        position: relative;
+
+                        &:before {
+                            content: "start date";
+                            position: absolute;
+                            top: -15px;
+                            left : 0;
+                            font-size: 10px;
+                            color: rgba($color: theme-color("success"), $alpha: .7);
+                        }
+                    }
+
+                    .end-date {
+                        top: 7.5px;
+                        position: relative;
+
+                        &:before {
+                            content: "end date";
+                            position: absolute;
+                            top: -15px;
+                            right: 0;
+                            font-size: 10px;
+                            color: rgba($color: theme-color("danger"), $alpha: .7);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .t-head{
+        display: table-header-group;
+    }
+
+}
+
+@keyframes left-to-right{
+    0%{
+        opacity: 0;
+        left: -100%;
+    }
+
+    2%{
+        opacity: 1;
+        left: -100%;
+    }
+    99%{
+        opacity: 1;
+        left: 100%;
+    }
+    100%{
+        opacity: 0;
+        left: -100%;
+    }
+}

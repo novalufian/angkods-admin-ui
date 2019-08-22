@@ -15,7 +15,7 @@
 
 .btn-flat{
     border: none;
-    border-radius: 0px;
+    border-radius: 0px !important;
 }
 
 .btn-group{
@@ -23,7 +23,7 @@
         .btn-#{$color} {
             @include button-variant($value, $value);
             border : none;
-            font-size: 13px;
+            font-size: 14px;
             padding: 7.5px 15px;
 
             &:first-child{
@@ -45,4 +45,10 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
-  }
+}
+
+input{
+    &:focus{
+        outline: none;
+    }
+}

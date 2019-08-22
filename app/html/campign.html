@@ -70,7 +70,7 @@
             
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <button class="btn btn-defult" id="menu-bar-btn">
-                    <i class="lni-menu text-bold"></i>
+                    <i class="fas fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="#" >
                     <img src="https://miro.medium.com/max/1200/1*gOtFeO2p_WSenEhVFyhMig.png" class="brand-icon" alt="">
@@ -117,122 +117,342 @@
 
             <div class=" body-container container " id="main-content-wrapper">
                 
-                <div class="d-flex justify-content-center mb-45 flex-row ">
-                    <div class="card col-md-12">
-                        <div class="card-body">
-                            <table class="table text-12">
-                                <thead>
-                                    <tr>
-                                        <th>Campaign id</th>
-                                        <th>Campaign name</th>
-                                        <th>Status</th>
-                                        <th>Gross cost</th>
-                                        <th>Start date</th>
-                                        <th>End date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>D253D99C-90AC-EBBF-C1EB-A66798E96F02</td>
-                                        <td>Nam Company</td>
-                                        <td><span class="badge badge-success">delivering</span></td>
-                                        <td>$8514.41</td>
-                                        <td>Tue, 28th, 2020</td>
-                                        <td>Thu, 26th, 2019 </td>
-                                    </tr>
-                                    <tr>
-                                        <td>28849362-3ABB-43F8-AA54-1D27EDAABDC5</td>
-                                        <td>Dictum Placerat Augue Industries</td>
-                                        <td><span class="badge badge-success">delivering</span></td>
-                                        <td>$4421.93</td>
-                                        <td>Fri, 6th, 2020</td>
-                                        <td>Tue, 16th, 2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>A571567A-F553-BE40-5618-94B1D008D554</td>
-                                        <td>Neque Inc.</td>
-                                        <td><span class="badge badge-secondary">completed</span></td>
-                                        <td>$1671.71</td>
-                                        <td>Thu, 9th, 2020</td>
-                                        <td>Mon, 20th, 2019</td>
-                                    </tr>
-                                    <tr>
-                                        <td>21FC902B-BA77-8BF8-A228-8B0B11009068</td>
-                                        <td>Aenean PC</td>
-                                        <td><span class="badge badge-info">ready</span></td>
-                                        <td>$1713.68</td>
-                                        <td>Wed, 23rd, 2019</td>
-                                        <td>Wed, 7th, 2019</td>
-                                    </tr>
-                                    <tr>
-                                        <td>C6A796B2-8C49-AF77-F2F1-80BEF0B9CF25</td>
-                                        <td>Sapien Consulting</td>
-                                        <td><span class="badge badge-warning">pending</span></td>
-                                        <td>$1074.19</td>
-                                        <td>Mon, 13th, 2020</td>
-                                        <td>Thu, 22nd, 2018</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3ED784BC-C4D8-B63A-85E5-07360DE56AB2</td>
-                                        <td>Mauris Morbi Non Consulting</td>
-                                        <td><span class="badge badge-info">ready</span></td>
-                                        <td>$2045.95</td>
-                                        <td>Tue, 23rd, 2019</td>
-                                        <td>Thu, 5th, 2020</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1A611208-69FE-B2A9-C3A5-7A98335B05C7</td>
-                                        <td>Augue LLC</td>
-                                        <td><span class="badge badge-danger">need creative</span></td>
-                                        <td>$5545.90</td>
-                                        <td>Thu, 5th, 2019</td>
-                                        <td>Mon, 19th, 2018</td>
-                                    </tr>
-                                    <tr>
-                                        <td>270CD9C9-67EA-D662-1820-1D30F044C361</td>
-                                        <td>Blandit PC</td>
-                                        <td><span class="badge badge-default">draft</span></td>
-                                        <td>$8912.51</td>
-                                        <td>Thu, 9th, 2018</td>
-                                        <td>Wed, 8th, 2019</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4578FC29-3F1D-53F1-3A23-E310C81DA076</td>
-                                        <td>Hendrerit Consectetuer Corp.</td>
-                                        <td><span class="badge badge-info">ready</span></td>
-                                        <td>$9264.02</td>
-                                        <td>Wed, 3rd, 2019</td>
-                                        <td>Fri, 12th, 2019</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1B03A0D6-2BCB-2258-6482-02C5BEF82042</td>
-                                        <td>Urna Associates</td>
-                                        <td><span class="badge badge-success">delivering</span></td>
-                                        <td>$7714.32</td>
-                                        <td>Sun, 5th, 2020</td>
-                                        <td>Fri, 25th, 2019</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div class="d-flex justify-content-center mb-45 flex-column">
+                    
+
+                    <div class="col-md-12 d-flex justify-content-between">
+                        <span class="alert text-secondary">
+                            <!-- <i class="fas fa-fire text-secondary"></i>  -->
+                            All
+                            <span class="text-primary">1.245</span>
+                            Campign
+                        </span>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-flat">
+                                <i class="fas fa-th-list text-secondary "></i>
+                            </button>
+                            <button type="button" class="btn btn-flat" alt="item">
+                                <i class="fas fa-th-large text-secondary "></i>
+                            </button>
                         </div>
                     </div>
-                    
-                    <!-- 
+
+                    <div class="col-dm-12 d-flex justify-content-end">
+                        <div class="form-group col-md-4 no-margin">
+                            <input type="text" class="form-control col-md-12" placeholder="Search..." >
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 t-div">
+                        <div class="t-head card flat text-12 ">
+                            <span class="t-cell no-border text-secondary text-center">No.</span>
+                            <span class="t-cell no-border text-secondary ">Campign name</span>
+                            <span class="t-cell no-border text-secondary text-center">Status</span>
+                            <span class="t-cell no-border text-secondary text-center">Duration</span>
+                            <span class="t-cell no-border text-secondary text-center">Impression</span>
+                            <span class="t-cell no-border text-secondary text-center">City</span>
+                            <span class="t-cell no-border text-secondary text-center">Route</span>
+                            <span class="t-cell no-border text-secondary text-center">Action</span>
+                        </div>
+
+                        <div class="t-row card flat text-12 loading">
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white">
+                                <span class="loading">
+                                    <p class="text-secondary text-center">Loading...</p>
+                                </span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center ">
+                                <span class="loading"></span>
+                            </span>
+                        </div>
+
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>2</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-success padding-10 text-12 no-margin">delivering</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span>view detail</span> 
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+                
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>3</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-warning padding-10 text-12 no-margin">draft</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary">view detail</span> 
+                                    <i class="fas fa-ellipsis-v text-secondary"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>4</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-info padding-10 text-12 no-margin">start soon</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary">view detail</span> 
+                                    <i class="fas fa-ellipsis-v text-secondary"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>5</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-danger padding-10 text-12 no-margin">paused</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary">view detail</span> 
+                                    <i class="fas fa-ellipsis-v text-secondary"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>6</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-success padding-10 text-12 no-margin">delivering</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary">view detail</span> 
+                                    <i class="fas fa-ellipsis-v text-secondary"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>7</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-success padding-10 text-12 no-margin">delivering</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary">view detail</span> 
+                                    <i class="fas fa-ellipsis-v text-secondary"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>8</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-success padding-10 text-12 no-margin">delivering</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary">view detail</span> 
+                                    <i class="fas fa-ellipsis-v text-secondary"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12">
+                            <span class="t-cell bg-white text-center"><p>9</p></span>
+                            <span class="t-cell bg-white">
+                                <p>Dana promo special tahun baru</p>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <div class="alert alert-success padding-10 text-12 no-margin">delivering</div>                                
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <p>
+                                    <span class="start-date">01-12-2019</span>
+                                    <span class="text-secondary">to</span>
+                                    <span class="end-date">31-12-2019</span>
+                                </p>
+                            </span>
+                            <span class="t-cell bg-white text-center">2.098.234 / <span class="text-primary">1.234 km</span></span>
+                            <span class="t-cell bg-white text-center">5</span>
+                            <span class="t-cell bg-white text-center">120</span>
+                            <span class="t-cell bg-white text-center ">
+                                <p class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary">view detail</span> 
+                                    <i class="fas fa-ellipsis-v text-secondary"></i>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="row h-10"></div>
+
+                        <div class="t-row card flat text-12 loading">
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center">
+                                <span class="loading"></span>
+                            </span>
+                            <span class="t-cell bg-white text-center ">
+                                <span class="loading"></span>
+                            </span>
+                        </div>
+
+                        <div class="t-head card flat text-12 ">
+                            <span class="t-cell no-border text-secondary text-center">No.</span>
+                            <span class="t-cell no-border text-secondary ">Campign name</span>
+                            <span class="t-cell no-border text-secondary text-center">Status</span>
+                            <span class="t-cell no-border text-secondary text-center">Duration</span>
+                            <span class="t-cell no-border text-secondary text-center">Impression</span>
+                            <span class="t-cell no-border text-secondary text-center">City</span>
+                            <span class="t-cell no-border text-secondary text-center">Route</span>
+                            <span class="t-cell no-border text-secondary text-center">Action</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 d-flex justify-content-between">
+                        <p class="text-12 text-secondary">page 2 of 12</p>
                         <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-end">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                </li>
+                            <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
                             </ul>
-                        </nav> 
-                    -->
-                    
+                        </nav>
+                    </div>
                 </div>
                 
                 
