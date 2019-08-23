@@ -41,18 +41,25 @@
 
         .t-cell{
             display: table-cell;
+            transition: all .25s ease-in-out;
             
             
         }
 
         &:hover{
-            transform: scale(1.025);
+            transform: scale(1.025); 
         }
 
         &.card{
             .t-cell{
                 padding: 15px 10px;
                 border-right: solid 1px rgba(theme-color("secondary"), .1);
+
+                .form-group{
+                    .text{
+                        width: unset;
+                    }
+                }
 
                 &:first-child{
                     border-radius: 10px 0 0  10px;
@@ -64,7 +71,11 @@
                 }
 
                 .fas{
-                    margin-right: 10px;
+                    width : 15px;
+                }
+
+                .far{
+                    width: 15px;
                 }
 
                 p{
@@ -98,12 +109,53 @@
                         }
                     }
                 }
+
+                .moreaction {
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    background: #444;
+                    top: 34px;
+                    right: 45px;
+                    overflow: hidden; 
+                    border-radius: 10px;
+                    box-shadow: 1px 1px 15px 5px #44444430;
+                    transition: all .25s ease-in-out;
+
+                    button{
+                        opacity: 0;
+                        transition: all .25s ease-in-out;
+                    }
+
+                    &.active{
+                        width: 170px;
+                        height: 40px;
+                        top : 14px;
+
+                        button{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.selected{
+            .t-cell{
+                background: rgba($color: theme-color("info"), $alpha: .175) !important;
+                border-right: solid 1px rgba(147,222,255,0.35);
             }
         }
     }
 
     .t-head{
         display: table-header-group;
+
+        &.selected{
+            .t-cell{
+                background: none !important;
+            }
+        }
     }
 
 }

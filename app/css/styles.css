@@ -13012,10 +13012,6 @@ input:focus {
   vertical-align: middle;
 }
 
-.form-group.checkbox .form-checkbox {
-  margin-right: 10px;
-}
-
 .form-group.checkbox .form-checkbox.uncheck:before {
   content: "\f0c8";
 }
@@ -13030,6 +13026,7 @@ input:focus {
       -ms-user-select: none;
           user-select: none;
   width: calc(100% - 75px);
+  padding: 0 10px;
 }
 
 .form-group textarea,
@@ -13410,6 +13407,8 @@ input:focus {
 .t-div .t-foot .t-cell,
 .t-div .t-row .t-cell {
   display: table-cell;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .t-div .t-head:hover,
@@ -13424,6 +13423,12 @@ input:focus {
 .t-div .t-row.card .t-cell {
   padding: 15px 10px;
   border-right: solid 1px rgba(176, 176, 176, 0.1);
+}
+
+.t-div .t-head.card .t-cell .form-group .text,
+.t-div .t-foot.card .t-cell .form-group .text,
+.t-div .t-row.card .t-cell .form-group .text {
+  width: unset;
 }
 
 .t-div .t-head.card .t-cell:first-child,
@@ -13442,7 +13447,13 @@ input:focus {
 .t-div .t-head.card .t-cell .fas,
 .t-div .t-foot.card .t-cell .fas,
 .t-div .t-row.card .t-cell .fas {
-  margin-right: 10px;
+  width: 15px;
+}
+
+.t-div .t-head.card .t-cell .far,
+.t-div .t-foot.card .t-cell .far,
+.t-div .t-row.card .t-cell .far {
+  width: 15px;
 }
 
 .t-div .t-head.card .t-cell p,
@@ -13487,8 +13498,58 @@ input:focus {
   color: rgba(243, 14, 92, 0.7);
 }
 
+.t-div .t-head.card .t-cell .moreaction,
+.t-div .t-foot.card .t-cell .moreaction,
+.t-div .t-row.card .t-cell .moreaction {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: #444;
+  top: 34px;
+  right: 45px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 15px 5px #44444430;
+          box-shadow: 1px 1px 15px 5px #44444430;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.t-div .t-head.card .t-cell .moreaction button,
+.t-div .t-foot.card .t-cell .moreaction button,
+.t-div .t-row.card .t-cell .moreaction button {
+  opacity: 0;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.t-div .t-head.card .t-cell .moreaction.active,
+.t-div .t-foot.card .t-cell .moreaction.active,
+.t-div .t-row.card .t-cell .moreaction.active {
+  width: 170px;
+  height: 40px;
+  top: 14px;
+}
+
+.t-div .t-head.card .t-cell .moreaction.active button,
+.t-div .t-foot.card .t-cell .moreaction.active button,
+.t-div .t-row.card .t-cell .moreaction.active button {
+  opacity: 1;
+}
+
+.t-div .t-head.selected .t-cell,
+.t-div .t-foot.selected .t-cell,
+.t-div .t-row.selected .t-cell {
+  background: rgba(147, 222, 255, 0.175) !important;
+  border-right: solid 1px rgba(147, 222, 255, 0.35);
+}
+
 .t-div .t-head {
   display: table-header-group;
+}
+
+.t-div .t-head.selected .t-cell {
+  background: none !important;
 }
 
 @-webkit-keyframes left-to-right {

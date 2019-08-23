@@ -1,4 +1,5 @@
-var formInputCheckBox = document.querySelectorAll(".form-group.checkbox");
+var formInputCheckBox = document.querySelectorAll(".form-group.ckbx-filter");
+var formInputCheckBoxTable = document.querySelectorAll(".form-group.ckbx-table");
 
 init();
 
@@ -12,11 +13,15 @@ function checkBox(){
             el.addEventListener("click", togleCheckbox)
         })
     }
+
+    if(formInputCheckBoxTable){
+        formInputCheckBoxTable.forEach(function(el, index){
+            el.addEventListener("click", togleCheckboxTable)
+        })
+    }
 }
 
-function togleCheckbox(){
-    console.log(this);
-    var ckbx = this;
+function togleCheckbox(ckbx){
     var input = ckbx.querySelector('input[type="checkbox"]');
     var icon = ckbx.querySelector(".form-checkbox");
     var text = ckbx.querySelector(".text");
@@ -34,5 +39,24 @@ function togleCheckbox(){
         text.classList.remove("text-"+textColor);
 
     }
-    console.log(input.checked);
+}
+
+function togleCheckboxFilter(){
+    togleCheckbox(this);
+}
+
+function togleCheckboxTable() {
+    var ckbx = this;
+
+    togleCheckbox(ckbx);
+
+    console.log(ckbx);
+    var input = ckbx.querySelector('input[type="checkbox"]');
+    var tr = ckbx.parentElement.parentElement;
+
+    if(input.checked){
+        tr.classList.add("selected");
+    }else{
+        tr.classList.remove("selected");
+    }
 }
