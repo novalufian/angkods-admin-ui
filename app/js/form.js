@@ -10,7 +10,7 @@ function init(){
 function checkBox(){
     if(formInputCheckBox){
         formInputCheckBox.forEach(function(el, index){
-            el.addEventListener("click", togleCheckbox)
+            el.addEventListener("click", togleCheckboxFilter)
         })
     }
 
@@ -42,7 +42,8 @@ function togleCheckbox(ckbx){
 }
 
 function togleCheckboxFilter(){
-    togleCheckbox(this);
+    var ckbx = this;
+    togleCheckbox(ckbx);
 }
 
 function togleCheckboxTable() {

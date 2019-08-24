@@ -13407,6 +13407,7 @@ input:focus {
 .t-div .t-foot .t-cell,
 .t-div .t-row .t-cell {
   display: table-cell;
+  position: relative;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }

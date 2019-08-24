@@ -16,5 +16,7 @@
             "savePath": "/app/css/"
         }
     ],
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback','Fira Code'",
+    "editor.fontLigatures": true
 }
