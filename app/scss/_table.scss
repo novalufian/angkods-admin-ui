@@ -55,7 +55,6 @@
             .t-cell{
                 padding: 15px 10px;
                 border-right: solid 1px rgba(theme-color("secondary"), .1);
-
                 .form-group{
                     .text{
                         width: unset;
@@ -121,7 +120,7 @@
                     overflow: hidden; 
                     border-radius: 10px;
                     box-shadow: 1px 1px 15px 5px #44444430;
-                    transition: all .25s ease-in-out;
+                    transition: all .15s ease-in-out;
 
                     button{
                         opacity: 0;

@@ -101,3 +101,16 @@
          }
     }
 }
+
+
+.thumb-profile {
+    position: absolute;
+    right: 50px;
+    bottom: -50px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    z-index: 99;
+    border-radius: 20px;
+    border: solid 5px #fff;
+}

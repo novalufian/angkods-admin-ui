@@ -1,0 +1,50 @@
+#body-wrapper-feedback{
+    position: fixed;
+    width: calc(100% - 75px);
+    height: 100vh;
+    top: 55px;
+    left: 75px;
+    transition: all .25s ease-in-out;
+
+    &.active{
+        width: calc(100% - 250px);
+        left: 250px;
+    }
+
+    #chat-list{
+        position: relative;
+        width: 100%;
+
+        .chat-item{
+            position: relative;
+            width: 100%;
+            padding: 30px;
+            display: inline-flex;
+
+            section{
+                display: inline-block;
+                &.profile{
+                    width: 70px;
+                    margin-left: 30px;
+                    
+                    img{
+                        position: relative;
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 auto;
+                        border-radius: 100%;
+
+                    }
+                    
+                }
+
+                &.text{
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+    }
+}

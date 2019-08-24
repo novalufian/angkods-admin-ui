@@ -1,15 +1,19 @@
 var buttonMenu = document.getElementById("menu-bar-btn");
 var menuBarContainer = document.getElementById("menu-bar");
 var menuitem = document.querySelectorAll(".main-menu .list-group .list-group-item");
+
 var adsTypeItem = document.querySelectorAll(".choose-ads-type");
 var menuAcitved = document.querySelector("#menu-bar .main-menu .list-group .list-group-item.active");
+
+var formWizardTracker = document.querySelector(".form-wizard-tracker");
+var mainContainerWrapper = document.getElementById("main-content-wrapper");
+var mainPrelaoding = document.getElementById("main-preloading");
+
+var feedbackWrapper = document.getElementById("body-wrapper-feedback");
+
 var menuitemHover = null;
 var menuitemActive = null;
 var menuOverlayActive = null;
-var formWizardTracker = document.querySelector(".form-wizard-tracker");
-
-var mainContainerWrapper = document.getElementById("main-content-wrapper");
-var mainPrelaoding = document.getElementById("main-preloading");
 
 init();
 
@@ -104,6 +108,10 @@ function fnActiveMenuBar() {
 
         if(isSmallSreen){
             mainContainerWrapper.classList.remove("preloading-active");
+        }else{
+            if (feedbackWrapper) {
+                feedbackWrapper.classList.remove("active");
+            }
         }
     }else{
         isExpand = "true";
@@ -117,6 +125,10 @@ function fnActiveMenuBar() {
 
         if(isSmallSreen){
             mainContainerWrapper.classList.add("preloading-active");
+        }else{
+            if (feedbackWrapper) {
+                feedbackWrapper.classList.add("active");
+            }
         }
 
     }
@@ -218,8 +230,14 @@ function onWindowResize() {
     if(isExpand == "true"){
         if(isSmallSreen){
             mainContainerWrapper.classList.add("preloading-active");
+            if (feedbackWrapper) {
+                feedbackWrapper.classList.remove("active");
+            }
         }else{
             mainContainerWrapper.classList.remove("preloading-active");
+            if (feedbackWrapper) {
+                feedbackWrapper.classList.add("active");
+            }
         }
     }
 }
