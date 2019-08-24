@@ -60,4 +60,5 @@ function togleCheckboxTable() {
     }else{
         tr.classList.remove("selected");
     }
+    
 }
