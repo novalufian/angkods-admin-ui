@@ -16,31 +16,68 @@
     <link rel="stylesheet" href="../css/icofont.min.css">
     
 </head>
-<body >
-    <div class="d-flex">
-        <div class="login-container d-flex justify-content-end">
-            <div class="login-content col-md-4 bg-white">
-                <h1 class="greating">Welcome back!</h1>
-                
-                <form class="form-login col-md-10"> 
-                    <div class="form-group col-md-12 ">
-                        <button class="btn google-sign-in no-padding"><img src="../images/google/btn_google_signin_light_normal_web@2x.png" alt=""></button>
-                    </div>
-                    <div class="login-sparator"></div>
-                    <div class="form-group col-md-12">
-                        <label class="text-12 text-secondary">Email / username</label>
-                        <input type="text" class="form-control col-md-12" placeholder="hi@angkods.com" >
-                    </div>
+<body class="login-bg">
+    <div id="gateway-sparator">
+        <div class="login-container d-flex bg-white">
+            <div id="signup-area" class=" col-md-4 no-padding">
+                <div class="login-content bg-white">
+                    <h1 class="greating">Come and join us!</h1>
                     
-                    <div class="form-group col-md-12 ">
-                        <label class="text-12 text-secondary">Password</label>
-                        <input type="password" class="form-control col-md-12" placeholder="your password" >
-                    </div>
-                    <a class="forgot-password text-12" href="">forgot your password ?</a>
-                    <div class="form-group col-md-12 ">
-                        <button class="btn btn-primary flat fl-right">Sign in</button>
-                    </div>
-                </form>
+                    <form class="form-login col-md-10 row"> 
+                        <div class="form-group col-md-12 ">
+                            <button class="btn google-sign-in no-padding"><img src="../images/google/btn_google_signin_light_normal_web@2x.png" alt=""></button>
+                        </div>
+                        <div class="sparator sign-up"></div>
+                        <div class="form-group col-md-6 no-margin">
+                            <label class="text-12 text-secondary">First name</label>
+                            <input type="text" class="form-control col-md-12" placeholder="Jhon" >
+                        </div>
+                        <div class="form-group col-md-6 no-margin">
+                            <label class="text-12 text-secondary">Last name</label>
+                            <input type="text" class="form-control col-md-12" placeholder="Doe" >
+                        </div>
+                        <div class="form-group col-md-12 no-margin">
+                            <label class="text-12 text-secondary">Email</label>
+                            <input type="text" class="form-control col-md-12" placeholder="hi@angkods.com" >
+                        </div>
+                        <div class="form-group col-md-12 no-margin">
+                            <label class="text-12 text-secondary">Password</label>
+                            <input type="password" class="form-control col-md-12" placeholder="password" >
+                        </div>
+                        <div class="form-group col-md-12 ">
+                            <button class="btn btn-primary flat fl-right">Sign up</button>
+                        </div>
+                        <p class="signup-text text-12">already have an account, <span class="change-page text-primary">sign in</span> here</p>
+                    </form>
+                </div>
+            </div>
+            
+            <div id="login-area" class=" col-md-4 no-padding">
+                <div class="login-content bg-white">
+                    <h1 class="greating">Welcome back!</h1>
+                    
+                    <form class="form-login col-md-10"> 
+                        <div class="form-group col-md-12 ">
+                            <button class="btn google-sign-in no-padding"><img src="../images/google/btn_google_signin_light_normal_web@2x.png" alt=""></button>
+                        </div>
+                        <div class="sparator login"></div>
+                        <div class="form-group col-md-12">
+                            <label class="text-12 text-secondary">Email / username</label>
+                            <input type="text" class="form-control col-md-12" placeholder="hi@angkods.com" >
+                        </div>
+                        
+                        <div class="form-group col-md-12 ">
+                            <label class="text-12 text-secondary">Password</label>
+                            <input type="password" class="form-control col-md-12" placeholder="your password" >
+                        </div>
+                        <a class="forgot-password text-12" href="">forgot your password ?</a>
+                        <div class="form-group col-md-12 d-flex justify-content-end">
+                            <button class="btn btn-primary flat">Sign in</button>
+                        </div>
+
+                        <p class="signup-text text-12" >you don't have an account ? <span class="change-page text-primary">sign up</span> here</p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -52,8 +89,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> 
-    <script src="../js/main-chart.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/login.js"></script>
     <script>
         $('.your-element').tilt();
     </script>
