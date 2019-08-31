@@ -14,7 +14,19 @@ function changeLoginPage() {
     console.log(isRigth);
     if(isRigth){
         gateway.classList.remove("right");
+        gateway.classList.add("moveToLeft");
+        setTimeout(() => {
+            gateway.classList.add("left");
+            gateway.classList.remove("moveToLeft");
+        }, 510);
+
     }else{
+        gateway.classList.remove("left");
+        gateway.classList.add("moveToRight");
         gateway.classList.add("right");
+
+        setTimeout(() => {
+            gateway.classList.remove("moveToRight");
+        }, 510);
     }
 }

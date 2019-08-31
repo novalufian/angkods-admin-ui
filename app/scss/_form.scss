@@ -84,7 +84,7 @@
         }
         
         &::placeholder{
-            color: #212121;
+            color: theme-color("secondary");
         }
     }
     
@@ -111,9 +111,16 @@
             color: theme-color("danger");
             margin-right: 10px;
         }
+
+        &.no-label{
+            &:after{
+                content: "";
+            }
+        }
         
         input{
             border: solid 1px theme-color("danger");
+           
         }
     }
     

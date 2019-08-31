@@ -3,21 +3,57 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    transition : all .25s cubic-bezier(.06,.72,.71,.32);
-    clip-path: inset(0 calc((100% / 12 ) * 8 ) 0 0);
+    transition : all .1s cubic-bezier(.06,.72,.71,.32);
 
+    &.moveToLeft{
+        animation: moveTOLeft .5s forwards;
+    }
+    &.moveToRight{
+        animation: moveTORight .5s forwards;
+    }
+
+    &.left{
+        clip-path: inset(0 calc((100% / 12 ) * 8 ) 0 0);
+
+        &.loading{
+            clip-path: inset(calc(50% - 50px) calc(90% - 50px) calc(50% - 50px) calc(10% - 50px) round 100px);
+            .login-container{
+                #login-area,
+                #signup-area{
+                    opacity: 0;
+                }
+            }
+        }
+    }
     &.right{
         clip-path: inset(0 0 0 calc((100% / 12 ) * 8 ));
+
+        &.loading{
+            clip-path: inset(calc(50% - 50px) calc(10% - 50px)  calc(50% - 50px) calc(90% - 50px) round 100px);
+            .login-container{
+                #login-area,
+                #signup-area{
+                    opacity: 0;
+                }
+            }
+        }
 
         .login-container{
             #login-area{
                 right: 0px;
+                opacity: 1;
             }
 
             #signup-area{
                 left: -50%;
+                opacity: 0;
+
             }
         }
+    }
+
+    &.loading{
+        // clip-path: inset(0 0 0 calc((100% / 12 ) * 8 ));
     }
 
     .login-container{
@@ -27,12 +63,14 @@
 
         #login-area{
             right: -50%;
-            transition : all .15s ease-in-out;
+            opacity: 0;
+            transition : all .35s ease-in-out;
         }
 
         #signup-area{
             left: 0;
-            transition : all .15s ease-in-out;
+            opacity: 1;
+            transition : all .35s ease-in-out;
         }
 
         #signup-area,
@@ -117,6 +155,7 @@
 
                         .change-page{
                             cursor: pointer;
+                            margin: 0 5px;
                         }
                     }
                     
@@ -134,4 +173,22 @@
     background-image: url(../images/login.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+
+@keyframes moveTOLeft{
+    0%{clip-path: inset(0 0 0 calc((100% / 12 ) * 8) round 0);}
+    15%{clip-path: inset(0 0 0 calc((100% / 12 ) * 4) round 50% 0 0 50%);}
+    50%{clip-path: inset(0 calc((100% / 12 ) * 0) 0 0 round 50% 0 0 50%);}
+    85%{clip-path: inset(0 calc((100% / 12 ) * 4) 0 0 round 0 50% 50% 0);}
+    100%{clip-path: inset(0 calc((100% / 12 ) * 8) 0 0 round 0);}
+}
+
+@keyframes moveTORight{
+    0%{clip-path: inset(0 calc((100% / 12 ) * 8) 0 0 round 0);}
+    15%{clip-path: inset(0 calc((100% / 12 ) * 4) 0 0 round 0 50% 50% 0);}
+    50%{clip-path: inset(0 0 0 calc((100% / 12 ) * 0) round 0 50% 50% 0);}
+    85%{clip-path: inset(0 0 0 calc((100% / 12 ) * 4) round 50% 0 0 50%);}
+    100%{clip-path: inset(0 0 0 calc((100% / 12 ) * 8) round 0);}
 }
