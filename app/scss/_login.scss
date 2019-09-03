@@ -6,10 +6,10 @@
     transition : all .1s cubic-bezier(.06,.72,.71,.32);
 
     &.moveToLeft{
-        animation: moveTOLeft .5s forwards;
+        animation: moveTOLeft .35s forwards;
     }
     &.moveToRight{
-        animation: moveTORight .5s forwards;
+        animation: moveTORight .35s forwards;
     }
 
     &.left{
@@ -52,9 +52,7 @@
         }
     }
 
-    &.loading{
-        // clip-path: inset(0 0 0 calc((100% / 12 ) * 8 ));
-    }
+  
 
     .login-container{
         position: absolute;

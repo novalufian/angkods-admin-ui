@@ -13997,13 +13997,13 @@ input:focus {
 }
 
 #gateway-sparator.moveToLeft {
-  -webkit-animation: moveTOLeft .5s forwards;
-          animation: moveTOLeft .5s forwards;
+  -webkit-animation: moveTOLeft .35s forwards;
+          animation: moveTOLeft .35s forwards;
 }
 
 #gateway-sparator.moveToRight {
-  -webkit-animation: moveTORight .5s forwards;
-          animation: moveTORight .5s forwards;
+  -webkit-animation: moveTORight .35s forwards;
+          animation: moveTORight .35s forwards;
 }
 
 #gateway-sparator.left {
