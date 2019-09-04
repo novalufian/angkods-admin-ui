@@ -23,7 +23,8 @@ $theme-colors: (
     // "primary":    #0074e4,
     "purple":    #614ad3,
     "primary" :   #116BFE,
-    "secondary":  #b0b0b0 ,
+    // "secondary":  #b0b0b0 ,
+    "secondary" : #9CA3C0,
     "success":    #00bd56,
     "info":       #93deff,
     "warning":    #ffd933,
@@ -33,13 +34,14 @@ $theme-colors: (
     "dark":       $dark
 );
 
-$dark-color : #0F141A;
+$dark-color : #0F141A; 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 *{
     outline : 0;
-    color: #444444;
+    // color: #444444;
+    color : #3D425E;
 }
 
 body {
@@ -67,7 +69,7 @@ body {
 }
 
 .mb-30{
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
 }
 .mb-45{
     margin-bottom: 45px !important; 

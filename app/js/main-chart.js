@@ -1,22 +1,24 @@
+function generate_date(){
+    var chart_date = [];
+    for (let index = 0; index < 30; index++) {
+        chart_date.push(index);
+    }
+    return chart_date;
+}
+
+function generate_data(){
+    var chart_data = [];
+    for (let index = 0; index < 30; index++) {
+        chart_data.push(Math.floor(Math.random(1, 50) * 100) + 5)
+    }
+    
+    return chart_data;
+}
+
 var ctx = document.getElementById('myChart');
 if(ctx){
     ctx = ctx.getContext('2d');
-    function generate_date(){
-        var chart_date = [];
-        for (let index = 0; index < 30; index++) {
-            chart_date.push(index);
-        }
-        return chart_date;
-    }
     
-    function generate_data(){
-        var chart_data = [];
-        for (let index = 0; index < 30; index++) {
-            chart_data.push(Math.floor(Math.random(1, 50) * 100) + 5)
-        }
-    
-        return chart_data;
-    }
     
     var barChartData = {
         labels: generate_date(),
@@ -35,7 +37,7 @@ if(ctx){
             backgroundColor: "#00d1cd",
             data: generate_data(),
         }]
-    
+        
     };
     
     var myChart = new Chart(ctx, {
@@ -78,19 +80,19 @@ var ctx = document.getElementById('my_doughnut');
 if(ctx){
     ctx = ctx.getContext("2d");
     var gradient1 = ctx.createLinearGradient(0, 0, 0, 175);
-        gradient1.addColorStop(0.0, '#444444');
-        gradient1.addColorStop(1.0, '#444444');
-
-
+    gradient1.addColorStop(0.0, '#444444');
+    gradient1.addColorStop(1.0, '#444444');
+    
+    
     var gradient2 = ctx.createLinearGradient(0, 0, 0, 500);
-        gradient2.addColorStop(0.0, '#f30067');
-        gradient2.addColorStop(1.0, '#f30067');
-
+    gradient2.addColorStop(0.0, '#f30067');
+    gradient2.addColorStop(1.0, '#f30067');
+    
     var gradient3 = ctx.createLinearGradient(0, 0, 0, 500);
-        gradient3.addColorStop(0.0, '#00d1cd');
-        gradient3.addColorStop(1.0, '#00d1cd');
-
-
+    gradient3.addColorStop(0.0, '#00d1cd');
+    gradient3.addColorStop(1.0, '#00d1cd');
+    
+    
     var data = {
         datasets: [{
             data: [10, 20, 30],
@@ -106,7 +108,7 @@ if(ctx){
             'Blue'
         ]
     };
-
+    
     var myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
         data: data,
@@ -129,7 +131,7 @@ if(ctx){
 
 var ctx = document.getElementById('chart-progress-imp');
 if(ctx){
-
+    
     ctx = ctx.getContext('2d');
     var config = {
         type: 'line',
@@ -183,6 +185,57 @@ if(ctx){
             }
         }
     };
-
+    
     var myctx = new Chart(ctx,config);
+    
+}
+
+var ctx = document.getElementById('chart-detail-campaign-overflow').getContext('2d');
+if(ctx){
+    
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['sun', 'mon', 'tues', 'wed', 'thurs', 'fri', 'satur'],
+            datasets: [{
+                label: 'impression',
+                data: generate_data(),
+                backgroundColor: '#3975F6',
+                borderColor:'#ffffff',
+                borderWidth: 2
+            },
+            {
+                label: 'distance',
+                data: generate_data(),
+                backgroundColor: '#3975F680',
+                borderColor:'#3975F690',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive:true,
+            maintainAspectRatio: false,
+            legend: {
+                display : false
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    display : false,
+                    gridLines: {
+                        display:false
+                    },
+                    categoryPercentage: 1.0,
+                    barPercentage: 0.9
+                }],
+                yAxes: [{
+                    display : false,
+                    stacked: true,
+                    gridLines: {
+                        display:false
+                    },
+                }]
+            }
+        }
+    });
 }

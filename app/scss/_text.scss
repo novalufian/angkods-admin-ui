@@ -17,3 +17,21 @@
 .title-bold{
     font-weight: bold;
 }
+
+
+@each $color, $value in $theme-colors {
+    .text-sign-#{$color} {
+        margin: 5px 10px;
+
+        &:before{
+            content: "";
+            display: inline-block;
+            margin-right: 10px;
+            position: relative;
+            width: 10px;
+            height: 10px;
+            background: $value;
+            border-radius: 100px;
+        }
+    }
+}
