@@ -330,6 +330,9 @@ if(ctx){
                 gridLines: {
                     display:false
                 },
+                ticks: {
+                    fontColor: "#CCC", // this here
+                },
                 categoryPercentage: 1.0,
                 barPercentage: 0.9
             }],

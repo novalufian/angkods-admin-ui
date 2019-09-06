@@ -13,25 +13,7 @@
         &.loading{
             cursor: no-drop;
             .t-cell{
-                span.loading{
-                    height: 25px;
-                    width: 80%;
-                    background: rgba($color: theme-color("secondary"), $alpha: .5);
-                    border-radius: 2px;
-                    margin: 5px 0;
-                    overflow: hidden;
-                    position: relative;
-                    
-                    &:after{
-                        top: 0;
-                        content: "";
-                        position: absolute;
-                        width: 50%;
-                        height: 15px;
-                        background: #ffffff70;
-                        animation: left-to-right 1s infinite;
-                    }
-                }
+                
 
                 p{
                     margin: 5px !important;

@@ -69,6 +69,26 @@
     cursor: no-drop;
 }
 
+span.loading{
+    height: 25px;
+    width: 80%;
+    background: #f7f7f7;
+    border-radius: 2px;
+    margin: 5px 0;
+    overflow: hidden;
+    position: relative;
+    
+    &:after{
+        top: 0;
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 15px;
+        background: #ffffff70;
+        animation: left-to-right 1s infinite;
+    }
+}
+
 @keyframes loading{
     0%{
         content: ".";

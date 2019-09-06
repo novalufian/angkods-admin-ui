@@ -4,6 +4,7 @@
 
 .text-normal{
     color: #3D425E;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .font-800{
@@ -22,16 +23,27 @@
     font-weight: bold;
 }
 
+.w900{
+    font-weight: 900;
+}
+
 .text-loading{
     margin-right: 15px;
     position: relative;
+
     &:after{
         content: "";
         position: absolute;
         right: -22px;
         animation: loading-text 1s infinite;
-        width: 20px;
+        width: 20px; 
         text-align: left;
+        top: 0;
+    }
+
+    i{
+        font-size: 12px;
+        animation: loading-spiner 1s infinite;
     }
 }
 
@@ -67,5 +79,14 @@
     }
     100%{
         content: "."
+    }
+}
+
+@keyframes loading-spiner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
     }
 }
