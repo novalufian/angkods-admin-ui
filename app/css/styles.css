@@ -11061,6 +11061,10 @@ body {
   color: #212121;
 }
 
+.text-normal {
+  color: #3D425E;
+}
+
 .font-800 {
   font-weight: 800;
 }
@@ -13356,8 +13360,6 @@ input:focus {
 }
 
 .preloading-active {
-  -webkit-filter: blur(3.5px);
-          filter: blur(3.5px);
   cursor: no-drop;
 }
 

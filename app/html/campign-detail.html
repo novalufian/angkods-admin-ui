@@ -19,7 +19,7 @@
     
 </head>
 <body >
-    <div class="d-flex bg-white">
+    <div class="d-flex ">
         <aside id="menu-bar" data-menu-expand="false">
             <div class="main-menu">
                 <ul class="list-group">
@@ -121,12 +121,162 @@
                 
                 
                 <div class="col-md-9 d-flex justify-content-between">
-                    <div class="card col-md-12 flat">
+                    <div class="card col-md-12 ">
                         <div class="card-body ">
                             <h1 class="title-bold"><span class="text-secondary">Detail</span> Campign</h1>
+                            <p class="text-secondary mb-30">detail data overview <span class="text-normal">base on campign</span> you can break down by city targeting</p>
+                            
+                            <canvas id="chart-bar-main-detail-campign" width="400" height="150"></canvas>
+                            <p class="text-normal text-center mb-45">collect data from 15 last day on <span class="text-danger">september 2019</span></p>
+                            
+                            <p>detail break down city</p>
+                            <div class="t-div container">
+                                
+                                <div class="t-head card flat text-12">
+                                    <span class="t-cell no-border text-secondary ">City</span>
+                                    <span class="t-cell no-border text-secondary text-right">Impression</span>
+                                    <span class="t-cell no-border text-secondary text-right">Distance</span>
+                                    <span class="t-cell no-border text-secondary text-center">Route</span>
+                                    <span class="t-cell no-border text-secondary text-center">Action</span>
+                                </div>
+                                
+                                
+                                <div class="t-row text-12 card flat">
+                                    <span class="t-cell bg-white">
+                                        <p>Kota Surabaya</p>
+                                    </span>
+                                    <span class="t-cell bg-white text-right text-primary">234,098</span>
+                                    <span class="t-cell bg-white text-success text-right">9,098,234</span>
+                                    <span class="t-cell bg-white text-center">120</span>
+                                    <span class="t-cell bg-white text-center ">
+                                        <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                            <span>more</span> 
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </p>
+                                        
+                                        <span class="moreaction d-flex aligh-items-center">
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">Achieve</p>
+                                            </button>
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">view datail</p>
+                                            </button>
+                                        </span>
+                                    </span>
+                                </div>
+                                
+                                <div class="t-row text-12 card flat">
+                                    <span class="t-cell bg-white">
+                                        <p>Kota Mojokerto</p>
+                                    </span>
+                                    <span class="t-cell bg-white text-right text-primary">234,098</span>
+                                    <span class="t-cell bg-white text-success text-right">9,098,234</span>
+                                    <span class="t-cell bg-white text-center">120</span>
+                                    <span class="t-cell bg-white text-center ">
+                                        <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                            <span>more</span> 
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </p>
+                                        
+                                        <span class="moreaction d-flex aligh-items-center">
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">Achieve</p>
+                                            </button>
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">view datail</p>
+                                            </button>
+                                        </span>
+                                    </span>
+                                </div>
+                                
+                                <div class="t-row text-12 card flat">
+                                    <span class="t-cell bg-white">
+                                        <p>Kota Sidoarjo</p>
+                                    </span>
+                                    <span class="t-cell bg-white text-right text-primary">234,098</span>
+                                    <span class="t-cell bg-white text-success text-right">9,098,234</span>
+                                    <span class="t-cell bg-white text-center">120</span>
+                                    <span class="t-cell bg-white text-center ">
+                                        <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                            <span>more</span> 
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </p>
+                                        
+                                        <span class="moreaction d-flex aligh-items-center">
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">Achieve</p>
+                                            </button>
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">view datail</p>
+                                            </button>
+                                        </span>
+                                    </span>
+                                </div>
+                                
+                                <div class="t-row text-12 card flat">
+                                    <span class="t-cell bg-white">
+                                        <p>Kota Malang</p>
+                                    </span>
+                                    <span class="t-cell bg-white text-right text-primary">234,098</span>
+                                    <span class="t-cell bg-white text-success text-right">9,098,234</span>
+                                    <span class="t-cell bg-white text-center">120</span>
+                                    <span class="t-cell bg-white text-center ">
+                                        <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                            <span>more</span> 
+                                            <i class="fas fa-ellipsis-v"></i>
+                                        </p>
+                                        
+                                        <span class="moreaction d-flex aligh-items-center">
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">Achieve</p>
+                                            </button>
+                                            <button class="btn flat">
+                                                <p class="text-white text-12">view datail</p>
+                                            </button>
+                                        </span>
+                                    </span>
+                                </div>
+                                
+                                <div class="t-row text-12 loading card flat">
+                                    <span class="t-cell bg-white">
+                                        <span class="loading"></span>
+                                    </span>
+                                    <span class="t-cell bg-white text-right">
+                                        <span class="loading">
+                                            <p class="text-secondary text-center"></p>
+                                        </span>
+                                    </span>
+                                    <span class="t-cell bg-white text-right">
+                                        <span class="loading"></span>
+                                    </span>
+                                    <span class="t-cell bg-white text-right">
+                                        <span class="loading"></span>
+                                    </span>
+                                    <span class="t-cell bg-white text-center ">
+                                        <span class="loading"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="card card-line ">
+                                    <div class="card-body img-gallery-wrapper no-padding">
+                                        <div class="img-gallery-text">
+                                            <h2 class="text-white text-bold">Dummy campign name bus angkods</h2>
+                                            <p class="text-info text-12 no-margin">Pt. coba lagi pasti bisa</p>
+                                        </div>
+                                        <img src="https://loremflickr.com/720/500/city,bus?random=656" class="img-ads-gallery" alt="">
+                                        <button class="img-gallery-more btn btn-white">
+                                            <i class="lni-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                             
                             
                         </div>
+                        
+                        
                     </div>
                     
                 </div>

@@ -1,15 +1,16 @@
-function generate_date(){
+function generate_date(val){
     var chart_date = [];
-    for (let index = 0; index < 30; index++) {
+    for (let index = 0; index < val; index++) {
         chart_date.push(index);
     }
     return chart_date;
 }
 
-function generate_data(){
+function generate_data(plus){
+    plus = (plus == null ) ? 100 : plus;
     var chart_data = [];
     for (let index = 0; index < 30; index++) {
-        chart_data.push(Math.floor(Math.random(1, 50) * 100) + 5)
+        chart_data.push(Math.floor(Math.random(1, 50) * plus) + 5)
     }
     
     return chart_data;
@@ -21,7 +22,7 @@ if(ctx){
     
     
     var barChartData = {
-        labels: generate_date(),
+        labels: generate_date(30),
         datasets: [{
             label: 'Trayek 1',
             backgroundColor:"#444444",
@@ -238,4 +239,56 @@ if(ctx){
             }
         }
     });
+}
+
+var ctx = document.getElementById('chart-bar-main-detail-campign').getContext('2d');
+if(ctx){
+
+    var gradientStroke = ctx.createLinearGradient(0, 180, 0, 181);
+    gradientStroke.addColorStop(0, "#116BFE");
+    gradientStroke.addColorStop(1, "#428EF7");
+
+    
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: generate_date(15),
+            datasets: [{
+                label: 'impression',
+                data: generate_data(100000),
+                // backgroundColor: '#3975F6',
+                backgroundColor: gradientStroke,
+                // borderColor:'#ffffff',
+                // borderColor:'#3975F6',
+                borderWidth: 1,
+                borderRadius: 10
+            }
+        ]
+    },
+    options: {
+        // responsive:true,
+        // maintainAspectRatio: false,
+        legend: {
+            display : false
+        },
+        scales: {
+            xAxes: [{
+                stacked: true,
+                display : true,
+                gridLines: {
+                    display:false
+                },
+                categoryPercentage: 1.0,
+                barPercentage: 0.9
+            }],
+            yAxes: [{
+                display : false,
+                stacked: true,
+                gridLines: {
+                    display:false
+                },
+            }]
+        }
+    }
+});
 }
