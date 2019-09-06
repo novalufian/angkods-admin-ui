@@ -22,6 +22,18 @@
     font-weight: bold;
 }
 
+.text-loading{
+    margin-right: 15px;
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        right: -22px;
+        animation: loading-text 1s infinite;
+        width: 20px;
+        text-align: left;
+    }
+}
 
 @each $color, $value in $theme-colors {
     .text-sign-#{$color} {
@@ -37,5 +49,23 @@
             background: $value;
             border-radius: 100px;
         }
+    }
+}
+
+@keyframes loading-text {
+    0%{
+        content: "";
+    }
+    25%{
+        content: "."
+    }
+    50%{
+        content: ".."
+    }
+    75%{
+        content: "..."
+    }
+    100%{
+        content: "."
     }
 }

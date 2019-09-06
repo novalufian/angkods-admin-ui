@@ -241,9 +241,9 @@ if(ctx){
     });
 }
 
-var ctx = document.getElementById('chart-bar-main-detail-campign').getContext('2d');
+var ctx = document.getElementById('chart-bar-main-detail-campign');
 if(ctx){
-
+    ctx = ctx.getContext('2d');
     var gradientStroke = ctx.createLinearGradient(0, 180, 0, 181);
     gradientStroke.addColorStop(0, "#116BFE");
     gradientStroke.addColorStop(1, "#428EF7");
@@ -291,4 +291,63 @@ if(ctx){
         }
     }
 });
+}
+
+var ctx = document.getElementById('chart-bar-main-detail-campign-loading');
+if(ctx){
+    ctx = ctx.getContext('2d');
+    var gradientStroke = ctx.createLinearGradient(0, 180, 0, 181);
+    gradientStroke.addColorStop(0, "#f7f7f7");
+    gradientStroke.addColorStop(1, "#f7f7f7");
+
+    
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: generate_date(15),
+            datasets: [{
+                label: 'impression',
+                data: generate_data(100000),
+                // backgroundColor: '#3975F6',
+                backgroundColor: gradientStroke,
+                borderColor:'#f7f7f7',
+                // borderColor:'#3975F6',
+                borderWidth: 1,
+                borderRadius: 10
+            }
+        ]
+    },
+    options: {
+        // responsive:true,
+        // maintainAspectRatio: false,
+        legend: {
+            display : false
+        },
+        scales: {
+            xAxes: [{
+                stacked: true,
+                display : true,
+                gridLines: {
+                    display:false
+                },
+                categoryPercentage: 1.0,
+                barPercentage: 0.9
+            }],
+            yAxes: [{
+                display : false,
+                stacked: true,
+                gridLines: {
+                    display:false
+                },
+            }]
+        }
+    }
+    });
+
+    setInterval(function(){
+        myChart.data.datasets.forEach(function(dataset) {
+            dataset.data = generate_data();
+        });
+        myChart.update();
+    }, 1000)
 }

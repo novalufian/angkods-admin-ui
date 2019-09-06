@@ -56,6 +56,14 @@ body {
     // background: #0F141A;
 }
 
+.flex-auto{
+    flex: 0 0 auto;
+}
+
+.h-auto{
+    height: auto;
+}
+
 .min-height{
     min-height: calc(100vh - 125px);
 }
