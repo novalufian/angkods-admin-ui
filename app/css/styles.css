@@ -11683,6 +11683,10 @@ body {
   background: rgba(17, 107, 254, 0.02);
 }
 
+.card.card-fix-height {
+  height: calc(100vh - 180px);
+}
+
 .card-item {
   cursor: pointer;
   min-height: 122px;
@@ -13493,6 +13497,27 @@ input:focus {
   cursor: no-drop;
 }
 
+span.loading {
+  height: 25px;
+  width: 100%;
+  background: #f7f7f7;
+  border-radius: 2px;
+  margin: 5px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+span.loading:after {
+  top: 0;
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 15px;
+  background: #ffffff70;
+  -webkit-animation: left-to-right 1s infinite;
+          animation: left-to-right 1s infinite;
+}
+
 @-webkit-keyframes loading {
   0% {
     content: ".";
@@ -13530,6 +13555,11 @@ input:focus {
   margin: 0 !important;
 }
 
+#map-detail {
+  position: absolute;
+  height: 100%;
+}
+
 .alert {
   margin-bottom: 5px;
   border-radius: 15px;
@@ -13544,6 +13574,15 @@ input:focus {
 
 .alert.item {
   cursor: pointer;
+}
+
+.alert.alert-outline {
+  border: solid 1px rgba(156, 163, 192, 0.2);
+}
+
+.alert.loading {
+  height: 50px;
+  border-radius: 10px;
 }
 
 .alert-primary {

@@ -12,6 +12,15 @@
     &.item{
         cursor: pointer;
     }
+
+    &.alert-outline{
+        border: solid 1px rgba($color: theme-color("secondary"), $alpha: .2);
+    }
+
+    &.loading{
+        height: 50px;
+        border-radius: 10px;
+    }
     
 }
 
