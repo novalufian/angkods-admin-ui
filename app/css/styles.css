@@ -11974,6 +11974,216 @@ body {
   border: solid 1px rgba(17, 107, 254, 0.55);
 }
 
+.credit-card.bg-primary:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-primary:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-secondary:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-secondary:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-success:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-success:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-info:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-info:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-warning:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-warning:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-danger:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-danger:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-light:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-light:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-dark:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-dark:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-purple:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-purple:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-white:after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  left: -50px;
+  border-radius: 100%;
+}
+
+.credit-card.bg-white:before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  background: #ffffff20;
+  position: absolute;
+  bottom: -100px;
+  left: 25px;
+  border-radius: 100%;
+}
+
 .dropdown.navbar-top-menu {
   padding: 0 0 0 10px;
 }
@@ -13269,6 +13479,12 @@ input:focus {
 
 .thumb.circle {
   border-radius: 100%;
+}
+
+.bank-logo-list {
+  height: 20px;
+  margin: 5px;
+  width: auto;
 }
 
 .form-wizard-tracker {

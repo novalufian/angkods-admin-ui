@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My angkods dashboard</title>
+    
+    <link rel="stylesheet" href="../css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">
+    <link rel="shortcut icon" href="https://miro.medium.com/max/1200/1*gOtFeO2p_WSenEhVFyhM5 /ig.png" />
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/icofont.min.css">
+    
+    <script src="https://kit.fontawesome.com/85508c1dc0.js"></script>
+    
+</head>
+<body >
+    <div class="d-flex">
+        <aside id="menu-bar" data-menu-expand="false">
+            <div class="main-menu">
+                <ul class="list-group">
+                    <li class="list-group-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                        <p class="lni-dashboard icon no-margin"></p> 
+                        <p class="no-margin">Dashboard</p>
+                    </li>
+                    <li class="list-group-item " data-toggle="tooltip" data-placement="right" title="Campaign">
+                        <p class="icon lni-rocket no-margin"></p>
+                        <p class="no-margin">Campaign</p>
+                    </li>
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Payment">
+                        <p class="icon lni-credit-cards no-margin"></p> 
+                        <p class="no-margin">Payment</p>
+                    </li>
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Insight">
+                        <p class="no-margin icon lni-customer"></p>
+                        <p class="no-margin">Insight</p>
+                    </li>
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Ads Showcase">
+                        <p class="no-margin icon lni-gallery"></p>
+                        <p class="no-margin">Ads Showcase</p>
+                    </li>
+                    <li class="list-group-item mb-45"  data-toggle="tooltip" data-placement="right" title="Report">
+                        <p class="no-margin icon lni-files"></p>
+                        <p class="no-margin">Report</p>
+                    </li>
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Suport">
+                        <p class="no-margin icon lni-question-circle text-secondary"></p>
+                        <p class="no-margin text-secondary">Suport</p>
+                    </li>
+                    <li class="list-group-item"  data-toggle="tooltip" data-placement="right" title="Profile">
+                        <p class="no-margin icon lni-user text-secondary"></p>
+                        <p class="no-margin text-secondary">Profile</p>    
+                    </li>
+                    
+                    <li class="list-group-item item-fix-bottom mb-45"  data-toggle="tooltip" data-placement="right" title="send us feedback">
+                        <i class="no-margin icon lni-grow text-secondary"></i>
+                        <p class="no-margin text-secondary">About</p>    
+                    </li>
+                    <li class="list-group-item item-fix-bottom"  data-toggle="tooltip" data-placement="right" title="send us feedback">
+                        <i class="no-margin icon lni-comment-reply text-danger"></i>
+                        <p class="no-margin text-danger">Send us feedback</p>    
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <button class="btn btn-defult" id="menu-bar-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <img src="https://miro.medium.com/max/1200/1*gOtFeO2p_WSenEhVFy5 /hMig.png" class="brand-icon" alt="">
+        </a>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="col-md-2"></div>
+            
+            <p class="top-notif "> <i class="icofont-mega-phone icofont-1x text-primary pulse"></i> you got special offer for next campign , <span class="text-primary">discount up to 50%</span> click <a href="" class="text-primary">here</a> for more.</p>
+            
+            <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item">
+                    <span class="badge badge-danger badge-notif">9+</span>
+                    <a class="nav-link notifcation-bell" href="#">
+                        <i class="lni-alarm lni-tada-effect text-secondary"></i>
+                    </a>
+                </li>
+                <li class="dropdown navbar-top-menu">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Jessica Jhonas
+                        <img src="https://i.pravatar.cc/25" class="rounded" alt="Jessica Jhonas">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right margin-top-50" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">Action</button>
+                        <button class="dropdown-item" type="button">Another action</button>
+                        <button class="dropdown-item" type="button">Something else here</button>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">En</a>
+                    <div class="dropdown-menu dropdown-menu-right margin-top-50" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider">
+                        </div> <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="preloading " id="main-preloading">
+        <p><i class="lni-car"></i> Loading</p>
+    </div>
+    
+    <div class=" body-container container " id="main-content-wrapper">
+        
+        <div class="d-flex justify-content-center mb-45 flex-row">
+            
+            <div class="col-md-8">
+                
+                <div class="col-md-12 d-flex justify-content-between">
+                    <span class="alert text-secondary">
+                        <!-- <i class="fas fa-fire text-secondary"></i>  -->
+                        All
+                        <span class="text-primary">1.245</span>
+                        Campign
+                    </span>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-flat">
+                            <i class="fas fa-th-list text-secondary "></i>
+                        </button>
+                        <button type="button" class="btn btn-flat" alt="item">
+                            <i class="fas fa-th-large text-secondary "></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-dm-12 d-flex justify-content-end">
+                    <div class="form-group col-md-4 no-margin">
+                        <input type="text" class="form-control col-md-12" placeholder="Search..." >
+                    </div>
+                </div>
+                
+                <div class="col-md-12 t-div">
+                    <div class="t-head card flat text-12">
+                        <span class="t-cell no-border text-secondary text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text text-12 text-secondary">No.</span>
+                            </div>
+                        </span>
+                        <span class="t-cell no-border text-secondary ">Campign name</span>
+                        <span class="t-cell no-border text-secondary text-center">Status</span>
+                        <span class="t-cell no-border text-secondary text-center">Bank</span>
+                        <span class="t-cell no-border text-secondary text-center">Action</span>
+                    </div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">2</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-success padding-10 text-12 no-margin">Paid</div>                                
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="http://www.c2c-bike.com/images/bank/bca.png" class="bank-logo-list" alt="">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">3</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-danger padding-10 text-12 no-margin">Cencelled</div>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="http://via.placeholder.com/100x50/ffffff/f30067?text=no%20bank" class="bank-logo-list" alt="">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">4</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-warning padding-10 text-12 no-margin">Pending</div>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="http://via.placeholder.com/100x50/ffffff/f30067?text=no%20bank" class="bank-logo-list" alt="">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">5</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-warning padding-10 text-12 no-margin">Pending</div>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="http://via.placeholder.com/100x50/ffffff/f30067?text=no%20bank" class="bank-logo-list" alt="">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">6</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-success padding-10 text-12 no-margin">Paid</div>                                
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="http://perbanas.org/img/bank_anggota/CP1704260412017-04-26_16_58_40.png" class="bank-logo-list" alt="">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">7</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-success padding-10 text-12 no-margin">Paid</div>                                
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="https://logos-download.com/wp-content/uploads/2016/06/Mandiri_logo.png" alt="" class="bank-logo-list">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">8</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-success padding-10 text-12 no-margin">Paid</div>                                
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_vrt_pos_92px_2x.png" alt="" class="bank-logo-list">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12">
+                        <span class="t-cell bg-white text-center">
+                            <div class="form-group col-md-12 checkbox ckbx-table no-border filter no-margin">
+                                <input type="checkbox" class="hidden" >
+                                <span class="far form-checkbox uncheck" data-color="primary"></span>
+                                <span class="text">999.999</span>
+                            </div>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <p>Dana promo special tahun baru</p>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <div class="alert alert-success padding-10 text-12 no-margin">Paid</div>                                
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <img src="http://www.grosirkuota.com/wp-content/uploads/2017/01/logo-bank-bni-e1429736787644.jpeg" alt="" class="bank-logo-list">
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <p class="btn d-flex justify-content-between align-items-center text-12 btn-more-table" data-more-show="false">
+                                <span>more</span> 
+                                <i class="fas fa-ellipsis-v"></i>
+                            </p>
+                            
+                            <span class="moreaction d-flex aligh-items-center">
+                                <button class="btn flat">
+                                    <p class="text-white text-12">Achieve</p>
+                                </button>
+                                <button class="btn flat">
+                                    <p class="text-white text-12">view datail</p>
+                                </button>
+                            </span>
+                        </span>
+                    </div>
+                    <div class="row h-10"></div>
+                    
+                    <div class="t-row card flat text-12 loading">
+                        <span class="t-cell bg-white text-center">
+                            <span class="loading"></span>
+                        </span>
+                        <span class="t-cell bg-white">
+                            <span class="loading"></span>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <span class="loading"></span>
+                        </span>
+                        <span class="t-cell bg-white text-center">
+                            <span class="loading"></span>
+                        </span>
+                        <span class="t-cell bg-white text-center ">
+                            <span class="loading"></span>
+                        </span>
+                    </div>
+                    
+                    <div class="t-head card flat text-12 ">
+                        <span class="t-cell no-border text-secondary text-center">No.</span>
+                        <span class="t-cell no-border text-secondary ">Campign name</span>
+                        <span class="t-cell no-border text-secondary text-center">Status</span>
+                        <span class="t-cell no-border text-secondary text-center">City / Route</span>
+                        <span class="t-cell no-border text-secondary text-center">Action</span>
+                    </div>
+                </div>
+                
+                <div class="col-md-12 d-flex justify-content-between ">
+                    <p class="text-12 text-secondary">page 2 of 12</p>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card flat no-margin">
+                    <div class="card-body no-padding ">
+                        <p class="alert text-center col-md-12">
+                            <span class="text-normal">Most used card</span>
+                        </p>
+                        
+                        <div class="card bg-primary mb-45 credit-card">
+                            <div class="card-body ">
+                                <p class="text-right">
+                                    <img src="https://rocketmanajemen.com/wp-content/uploads/2019/06/logo-bank-bca.png" class="bank-logo-list" alt="">
+                                </p>
+                                <p class="text-white">PT. Bisa aja loe</p>
+                                <p class="no-margin text-12 text-secondary">Card number</p>
+                                <p class="text-white">1234 **** **** 4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-12 t-div no-margin">
+                            <div class="t-row card flat text-12 no-margin">
+                                <span class="t-cell bg-white text-left">
+                                    <img src="http://www.c2c-bike.com/images/bank/bca.png" class="bank-logo-list" alt="">
+                                </span>
+                                <span class="t-cell bg-white text-left">
+                                    <p>1234 **** **** 4567</p>
+                                    <p class="text-success">active</p>
+                                </span>
+                            </div>
+                            <div class="t-row card flat text-12 no-margin">
+                                <span class="t-cell bg-white text-left">
+                                    <img src="https://logos-download.com/wp-content/uploads/2016/06/Mandiri_logo.png" class="bank-logo-list" alt="">
+                                </span>
+                                <span class="t-cell bg-white text-left">
+                                    <p>8798 **** **** 1114</p>
+                                    <p class="text-success">active</p>
+                                </span>
+                            </div>
+                            <div class="t-row card flat text-12 no-margin">
+                                <span class="t-cell bg-white text-left">
+                                    <img src="http://perbanas.org/img/bank_anggota/CP1704260412017-04-26_16_58_40.png" class="bank-logo-list" alt="">
+                                </span>
+                                <span class="t-cell bg-white text-left">
+                                    <p>6681 **** **** 7811</p>
+                                    <p class="text-success">active</p>
+                                </span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- <div class="card-footer d-flex justify-content-end">
+                        <a href="" class="btn footer-link align-self-end text-danger">show all card 
+                            <i class="icofont-long-arrow-right text-danger"></i>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> 
+<script src="../js/main-chart.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/form.js"></script>
+<script src="../js/table.js"></script>
+
+<script>
+    $('.your-element').tilt();
+</script>
+</body>
+</html>
